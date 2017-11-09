@@ -1,0 +1,1290 @@
+/* body{
+    overflow: hidden;
+} */
+
+#banner1 {
+    width: 100%;
+    height: 600px;
+    background: url("../img/bg-index.jpg") no-repeat;
+    background-size: 110%;
+    position: absolute;
+    /*z-index:90*/
+
+}
+
+#top-color {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 85px;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    /* display:none */
+
+}
+
+#top-color .fl {
+    top: -150px;
+    width: 148px;
+    height: 160px;
+    background: url("../img/ms_logo.png") no-repeat;
+    position: absolute;
+    left: 0;
+    z-index: 40;
+    cursor: pointer;
+   
+}
+
+#top-color .list {
+    text-align: center;
+    margin-left: 415px;
+    padding-top: 25px;
+}
+
+#top-color .list ul li {
+    float: left;
+    width: 535px;
+    height: 40px;
+}
+
+#top-color .list ul li:first-child {
+    background: url("../img/chapter_box.png") no-repeat 0 0;
+
+    width: 34px;
+    height: 38px;
+}
+
+#top-color .list ul li:last-child {
+    background: url("../img/chapter_box.png") no-repeat -34px 0;
+    width: 34px;
+    height: 38px;
+}
+
+#top-color .list ul .iconfont {
+    width: 16px;
+    height: 16px;
+    margin-top: 7px;
+}
+
+#top-color .list ul li:nth-child(2) {
+    width: 66px;
+}
+
+/*  线  点击之前   */
+#top-color .list ul .line {
+    height: 1px;
+    width: 87px;
+    background-color: #35394b;
+    margin-top: 18px;
+}
+
+/*  线  点击之后  */
+#top-color .list ul .line-hover {
+    height: 1px;
+    width: 87px;
+    background-color: darkorange;
+    margin-top: 18px;
+}
+
+#list_hide .icon_list {
+    margin-top: 30px;
+}
+
+#list_hide .icon_list li {
+    float: left;
+    margin-left: 36px;
+    position: relative;
+}
+
+#list_hide .icon_list li a {
+    content: "";
+    position: absolute;
+    color: #ffaa31;
+    width: 60px;
+    height: 42px;
+    top: 50px;
+    margin-top: -21px;
+    left: -14px;
+    font-size: 11px;
+    display: none;
+}
+
+#list_hide .icon_list li:hover {
+    color: #ffaa31;
+
+}
+
+#fr {
+    width: 160px;
+    height: 87px;
+    right: 0;
+    position: absolute;
+    top: 0;
+
+}
+
+#fr .left {
+    position: absolute;
+    width: 291px;
+    height: 85px;
+    background-color: rgba(0, 0, 0, 0.3);
+    left: -291px;
+    top: 0
+}
+
+#fr .hide {
+    display: none;
+}
+
+#fr .show {
+    display: block;
+}
+
+#right {
+    width: 180px;
+    height: 85px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: -100px;
+}
+
+#right .lt {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+
+}
+
+#right .iconfont {
+    position: absolute;
+    left: 1px;
+    top: 35px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#right .images {
+    background: url("../img/h_logo.png") no-repeat;
+    height: 50px;
+    width: 90px;
+    display: inline-block;
+    position: absolute;
+    left: 49px;
+    top: 19px;
+}
+#tohome{
+    /*display: block;*/
+    position: absolute;
+    width: 90px;
+    height: 50px;
+    left: 0;
+    top: 0;
+}
+/* 盒子样式 */
+#bBox{
+    width: 600px;
+    height: 60px;
+    display:none
+    
+}
+#bBox ul .iconfont {
+    cursor: pointer;
+}
+
+#zongw {
+    display: none;
+}
+
+#zongw .bott .biankuang {
+    width: 591px;
+    height: 328px;
+    overflow: hidden;
+    border: 20px solid #ffaa31;
+    margin-left: 50px;
+    position: absolute;
+    top: 83px;
+    left: 335px;
+    transform: scale(.9)
+}
+
+#zongw .bott .biankuang ul {
+    width: 1800px;
+    height: 350px;
+    position: absolute;
+    /*left: 0;*/
+    /*top: 0;*/
+}
+
+#zongw .bott .biankuang ul li {
+    float: left;
+    width: 591px;
+    height: 328px;
+}
+
+#zongw .bott .biankuang ul li img {
+    width: 591px;
+    height: 328px;
+    /*float:left*/
+}
+
+#zongw .biankuang .bofang {
+    font-size: 130px;
+    position: absolute;
+    top: 124px;
+    left: 245px;
+
+    background: url("../img/btn_video_2.png") no-repeat;
+    color: #dcdcdc;
+    height: 86px;
+    width: 73px;
+
+    /*opacity: 0.8;*/
+}
+
+#arr {
+    display: none;
+}
+
+#arr .left {
+    position: absolute;
+    left: 6px;
+    top: 45%;
+    cursor: pointer;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 40px;
+    /*opacity: 0.3;*/
+}
+
+#arr .right {
+    position: absolute;
+    left: 546px;
+    top: 45%;
+    cursor: pointer;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#arr .left:hover {
+    color: orange;
+}
+
+#arr .right:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+#bottom {
+    width: 1366px;
+    /*height: 130px;*/
+    position: absolute;
+    top: 470px;
+}
+
+#bottom .xv {
+    position: relative;
+
+}
+
+#bottom .xv span {
+    float: left;
+}
+
+#bottom .xv .tupian {
+    display: inline-block;
+    background: url("../img/chapter_title.png") no-repeat 0 -150px;
+    width: 59px;
+    height: 63px;
+    position: absolute;
+    top: -27px;
+    left: 544px;
+}
+
+#bottom .xv .title {
+    font-size: 30px;
+    position: absolute;
+    top: -21px;
+    left: 615px;
+    font-weight: bold;
+    color: #d4d5da
+}
+
+#bottom .wenzi {
+    width: 100%;
+    position: absolute;
+    top: 40px;
+}
+
+#bottom .wenzi p {
+    font-size: 14px;
+    text-align: center;
+    color: #d4d5da;
+}
+
+#bottom .more {
+    width: 80px;
+    text-align: center;
+    font-size: 17px;
+    color: #ffaa31;
+    border-top: 2px solid #ffaa31;
+    position: absolute;
+    top: 95px;
+    left: 648px;
+}
+
+#footer {
+    width: 100%;
+    height: 100px;
+    background: #000000;
+    text-align: center;
+    padding-top: 10px;
+    position: absolute;
+    bottom: -65px;
+}
+
+#footer .yejiao {
+    margin-top: 15px;
+}
+
+#footer .yejiao a {
+    color: #5d5d5d;
+}
+
+#footer .yejiao span {
+    border-left: 1px solid #5d5d5d;
+    /*height: 10px;*/
+    display: inline-block;
+    margin-top: 3px;
+    margin: 0 3px;
+}
+
+#footer .yejiao p {
+    margin-top: 2px;
+}
+
+/*  banner 2*/
+#banner2 .yejiao {
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    top: 85px;
+    left: 0;
+    /*display:none;*/
+}
+
+#aside {
+    width: 148px;
+    height: 450px;
+    position: absolute;
+    top: 147px;
+    left: -150px;
+    z-index: 90;
+}
+
+#aside li {
+    height: 89px;
+    width: 148px;
+    border-bottom: 1px dashed #4c5367;
+    position: relative;
+
+}
+
+#aside .iconfont {
+    position: absolute;
+    top: 10px;
+    left: 56px;
+    font-size: 29px;
+    font-weight: bold;
+    color: #727680;
+}
+
+#aside .zhuti {
+    position: absolute;
+    top: 52px;
+    left: 43px;
+    color: #727680;
+    font-size: 14px;
+}
+
+#aside .zhutui {
+    width: 148px;
+    height: 21px;
+    left: 0;
+    text-align: center;
+
+}
+
+#aside ul li:hover{
+    cursor:pointer;
+}
+#aside ul li .iconfont:hover{
+    color:#ffaa31;
+}
+
+
+
+#mxd{
+
+    background:url("../img/bg-ch1-ph1.jpg");
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 600px;
+}
+
+/*    重拾和平的背后    */
+/* 这个page1 还不能设置dis none 真是醉了  不知道为什么*/
+#para1 {
+    width: 680px;
+    height: 406px;
+    position: absolute;
+    /*z-index:-1;*/
+    top: 120px;
+    left: 158px;
+}
+
+#para1 h4 {
+    font-size: 34px;
+    color: #ffaa31;
+}
+
+#para1 .duanluo {
+    text-indent: 2em;
+    font-size: 14px;
+    color: white;
+    overflow: auto;
+}
+
+#para1 p {
+    line-height: 25px;
+
+}
+
+#para1 .bigimg1 {
+    position: absolute;
+    top: 5px;
+    left: 620px;
+
+}
+
+/*    重拾和平的背后   END */
+
+/*     索菲女王的诞生   */
+#page2 {
+    display: none;
+}
+
+#para2 {
+    width: 680px;
+    height: 406px;
+    position: absolute;
+    top: 120px;
+    left: 158px;
+}
+
+#para2 h4 {
+    font-size: 34px;
+    color: #ffaa31;
+}
+
+#para2 .duanluo {
+    /*text-indent:2em;*/
+    font-size: 14px;
+    color: white;;
+    overflow: auto;
+}
+
+#para2 p {
+    line-height: 25px;
+}
+
+#para2 .bigimg2 {
+    position: absolute;
+    top: -45px;
+    left: 690px;
+}
+
+#page2 .bigimg2 img{
+    width: 1007px;
+    height: 772px;
+    position: absolute;
+    top: -125px;
+    left: 390px;
+}
+
+/*     索菲女王的诞生  END  */
+
+/*      魔方的诞生      */
+#page3 {
+    display: none;
+}
+
+#para3 {
+    width: 680px;
+    height: 406px;
+    position: absolute;
+    top: 120px;
+    left: 158px;
+}
+
+#para3 h4 {
+    font-size: 34px;
+    color: #ffaa31;
+}
+
+#para3 .jieshao {
+    height: 340px;
+    width: 680px;
+    overflow: auto;
+    position: absolute;
+    z-index: 20;
+}
+
+#para3 .duanluo {
+    text-indent: 2em;
+    font-size: 14px;
+    color: white;;
+    overflow: auto;
+}
+
+#para3 p {
+    line-height: 25px;
+}
+
+#para3 .bigimg3 {
+    position: absolute;
+    top: -85px;
+    left: 658px;
+
+}
+
+/*    魔方的诞生  END  */
+
+/*         重拾和平的背后        */
+#page4 {
+    display: none;
+}
+
+#para4 {
+    width: 680px;
+    height: 406px;
+    position: absolute;
+    top: 120px;
+    left: 158px;
+}
+
+#para4 h4 {
+    font-size: 34px;
+    color: #ffaa31;
+}
+
+#para4 .jieshao {
+    height: 340px;
+    width: 680px;
+    overflow: auto;
+    position: absolute;
+    z-index: 20;
+}
+
+#para4 .duanluo {
+    text-indent: 2em;
+    font-size: 14px;
+    color: white;;
+    overflow: auto;
+}
+
+#para4 p {
+    line-height: 25px;
+}
+
+#para4 .bigimg4 {
+    position: absolute;
+    top: -190px;
+    left: 675px;
+
+}
+
+#mxd .btn{
+    height: 70px;
+    width: 70px;
+    position:absolute;
+    top:450px;
+    left:200px;
+
+}
+
+#mxd .btn img{
+    height:550px;
+    width: 280px;
+    font-size:50px;
+    z-index:200;!important;
+    position:absolute;
+    top:-170px;
+    left:-70px
+
+}
+
+/*    起源角色     */
+
+#qyjs {
+    width: 100%;
+    height: 600px;
+    background: url("../img/bg-work.jpg") no-repeat;
+    background-size: 110%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
+
+}
+
+#mask .page {
+    height: 515px;
+    width: 100%;
+    position: absolute;
+    top: 85px;
+}
+
+#mask .page .title {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+#mask .page .title h4 {
+    font-size: 30px;
+    color: white;
+}
+
+#mask .page .title span {
+    display: block;
+    line-height: 1;
+    margin-top: -5px;
+    color: #94979e;
+}
+
+#mask .page .person {
+    position: relative;
+
+}
+
+#mask .page .control {
+    height: 390px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+#mask .page .control .npc-list {
+    width: 2796px;
+    position: absolute;
+    left: 285.5px;
+    bottom: 0;
+}
+
+#mask .page .control .npc-list .item {
+    width: 214px;
+    height: 329px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+    margin-right: 25px;
+    box-shadow: 3px 3px 20px #1a1a1a;
+
+}
+#mask .page .control .npc-list .item img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+#mask .page .control .npc-list .item img:hover{
+    transform:scale(1.4);
+}
+#mask .page .control .npc-list .item i.kuang{
+    width: 194px;
+    height: 309px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:10px solid red;
+}
+
+
+#mask .page .control .npc-list .item strong {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: normal;
+    color: white;
+}
+
+/* 起源人物展示栏 */
+#npc-stage {
+    position: absolute;
+    z-index: 110;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    /* opacity: 0; */
+    /* background: red */
+    display: none;
+}
+
+/* 背景图 */
+#npc-stage .big-box {
+    position: relative;
+    height: 800px;
+    display: none;
+}
+
+#npc-stage .bg-pic {
+    width: 1920px;
+    height: 800px;
+    position: relative;
+    top: 0;
+    left: 50%;
+    margin-left: -960px;
+    /* z-index: 5; */
+    background: #2e3444;
+    background: url(../img/bg-ch1-ph1.jpg) no-repeat;
+}
+
+/* npc角色左侧信息介绍 */
+#npc-stage .npc-info {
+    /* white-space: nowrap; */
+    width: 740px;
+    height: 405px;
+    position: absolute;
+    top: 125px;
+    left: 50%;
+    margin-left: -600px;
+    /* background: red; */
+}
+
+#npc-stage .npc-info h4 {
+    overflow: hidden;
+    /* zoom: 1; */
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 34px;
+}
+
+#npc-stage .npc-info span {
+    display: block;
+    float: left;
+    border-bottom: 4px solid #fff;
+}
+
+#npc-stage .npc-info p {
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    color: #b1b3ba;
+}
+
+#npc-stage .npc-info li {
+    float: left;
+    padding-right: 20px;
+}
+
+/* 右侧大图 */
+#npc-stage .big-pic {
+    /* z-index: 150; */
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 700px;
+    height: 700px;
+    /* background: url(../img/npc_5_view.png) no-repeat; */
+}
+
+/* npc展示底部人物选择栏 */
+
+#npc-stage .btm-stage {
+    height: 163px;
+    width: 100%;
+    bottom: -125px;
+    left: 50%;
+    margin-left: -50%;
+    z-index: 120;
+    position: absolute;
+}
+
+#npc-stage .btm-stage .mxbox {
+    height: 125px;
+    background: #005DCA;
+    z-index: 200
+
+}
+
+#npc-stage .btm-stage span {
+    height: 38px;
+    margin-left: 520px;
+    background: url("../img/chara_sw.png") no-repeat;
+    display: block;
+}
+
+#npc-stage .btm-stage .npc {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+#npc-stage .btm-stage .npc li {
+    float: left;
+    margin-left: 55px;
+}
+
+#npc-stage .btm-stage .NPC {
+    position: absolute;
+    top: 57px;
+    left: 18px;
+}
+
+#npc-stage .btm-stage .NPC li {
+    float: left;
+    margin-left: 55px;
+}
+
+#npc-stage .btm-stage li {
+    width: 81px;
+    height: 94px;
+    float: left;
+    /* background-color: red; */
+    z-index: 115
+}
+
+#npc-stage .btm-stage li a {
+    display: block;
+    background: url(../img/chara-switch.png) no-repeat;
+    background-size: cover;
+    z-index: 111;
+}
+
+#npc-stage .btm-stage li img {
+    z-index: 130;
+
+    /* opacity: 0; */
+}
+
+#npc-stage .btm-stage li img:nth-child(9) {
+    display: block;
+
+    width: 70px;
+
+}
+
+/* 关闭按钮 */
+#npc-stage .closebtn {
+    position: absolute;
+    line-height: 56px;
+    top: 30px;
+    right: 30px;
+    color: #FFAA31;
+    width: 56px;
+    height: 56px;
+    font-size: 56px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+    transform-origin: center center;
+
+}
+
+#npc-stage .closebtn:hover {
+    transform: rotate(360deg)
+}
+
+
+/*    起源角色   完成    */
+
+
+
+
+/*               冒险序曲              */
+/*   播放按钮     :)   */
+#mxxq .box .inner ul li .blockBox .icf{
+    position:absolute;
+    top:29%;
+    left:36%;
+    background:url("../img/btn_video_2.png") no-repeat;
+    width:73px;
+    height: 87px;
+}
+
+#mxxq .box .inner ul li .blockBox .icf:hover{
+    background:url("../img/btn_video_3.png") no-repeat;
+}
+
+#mxxq .box {
+    width: 900px;
+    height: 400px;
+    margin: 100px auto;
+    padding-right: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+#mxxq .box .inner {
+    width: 3500px;
+    /*background-color: pink;*/
+    position: absolute;
+    top: 20px;
+    left: 0;
+}
+
+#mxxq .box .inner ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+#mxxq .box .inner ul li {
+    width: 300px;
+    height: 274px;
+    diaplay: block;
+    float: left;
+    z-index: 10;
+    margin: 10px;
+    position: relative;
+}
+
+#mxxq .box .inner ul li:hover {
+    width: 900px;
+}
+
+#mxxq .box .inner ul li .blockBox p {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 10px;
+
+
+}
+
+#mxxq .box .inner ul li .blockBox {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    float: left;
+    z-index: 2;
+    position: relative;
+}
+
+#mxxq .box .inner ul li .blockBox a:hover {
+    /*border: 20px solid #fdc516;*/
+    width: 274px;
+    height: 274px;
+    z-index: 10;
+}
+
+#mxxq .box .inner ul li .blockBox a {
+    width: 274px;
+    height: 274px;
+    z-index: 10;
+    display: block;
+    color: #fff;
+
+}
+
+#mxxq .box .inner ul li .hiddenBox {
+    float: left;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 130px;
+    z-index: -1;
+    width: 680px;
+    heigth: 240px;
+    background:rgba(0,0,0,0.2)
+
+}
+
+#mxxq .box .inner ul li .hiddenBox p, h1 {
+    float: right;
+    position: absolute;
+    left:300px;
+    top: 20px;
+    color: #fff;
+    text-align: center;
+
+}
+
+#mxxq .box .inner ul li .hiddenBox p {
+    width: 350px;
+    top: 80px;
+    left:280px;
+    color: #868c9e;
+    font-size:8px;
+    margin-left:20px;
+    line-height:25px;
+
+}
+
+
+
+/*        冒险序曲  完成          */
+
+
+/*        视觉盛宴            */
+
+#sjsy {
+    width: 100%;
+    height: 600px;
+    background: url("../img/bg-ch-gallery.jpg") no-repeat;
+    background-size: 110%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
+
+}
+
+#sjsy .page {
+    height: 515px;
+    width: 100%;
+    position: absolute;
+    top: 85px;
+}
+
+#sjsy .page .title {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+#sjsy .page .title h4 {
+    font-size: 30px;
+    color: white;
+}
+
+#sjsy .page .title span {
+    display: block;
+    line-height: 1;
+    margin-top: -5px;
+    font-size: -5px;
+    color: #94979e;
+}
+
+.stage {
+    width: 560px;
+    height: 300px;
+    margin: 60px 500px;
+    position: relative;
+    perspective: 600px;
+}
+
+.stage ul {
+    list-style: none;
+}
+
+.stage ul li {
+    position: absolute;
+    transition: all 1s ease 0s;
+    top: 0;
+    left: 0;
+}
+
+.stage ul li img {
+    /*让图片跟着自己的盒子变大、变小*/
+    width: 100%;
+}
+
+.stage ul li.stateA {
+    z-index: 777;
+    opacity: 0;
+    transform: rotateY(40deg) translateX(-200px) translateZ(-200px) scale(0.2);
+}
+
+.stage ul li.stateB {
+    z-index: 888;
+    transform: rotateY(40deg) translateX(-200px) translateZ(-200px) scale(0.7);
+}
+
+.stage ul li.stateC {
+    width: 560px;
+    z-index: 999;
+    transform: none;
+}
+
+.stage ul li.stateD {
+    z-index: 888;
+    transform: rotateY(-40deg) translateX(-60px);
+    transform: rotateY(-40deg) translateX(200px) translateZ(-200px) scale(0.7);
+}
+
+.stage ul li.stateE {
+    width: 80px;
+    z-index: 777;
+    opacity: 0;
+    transform: rotateY(-40deg) translateX(200px) translateZ(-200px) scale(0.2);
+}
+
+.stage ul li.waiting {
+    display: none;
+}
+
+.rightBtn {
+    float: right;
+    position: relative;
+    z-index: 113213;
+    bottom: 150px;
+    left: 600px;
+    position: absolute;
+
+}
+
+.leftBtn {
+    float: left;
+    position: relative;
+    z-index: 113213;
+    bottom: 150px;
+    left: -93px;
+    position: absolute;
+
+}
+
+/*    视觉盛宴  END  */
+
+/*    同人内容    */
+#trnr {
+    width: 100%;
+    height: 600px;
+    background: url("../img/bg-work.jpg") no-repeat;
+    background-size: 110%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: none;
+
+}
+
+#trnr .page {
+    height: 515px;
+    width: 100%;
+    position: absolute;
+    top: 85px;
+}
+
+#trnr .page .title {
+    height: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+#trnr .page .title h4 {
+    font-size: 30px;
+    color: white;
+    font-weight: normal;
+}
+
+#trnr .page .person {
+    position: relative;
+
+}
+
+#trnr .page .control {
+    height: 390px;
+}
+
+#trnr .page .control .tm {
+    width: 100%;
+    position: absolute;
+    left: 290px;
+    bottom: 30px;
+}
+
+#trnr .page .control .tm div {
+    float: left;
+    margin-right: 30px;
+    position: relative;
+    height: 299px;
+    width: 270px;
+}
+
+#trnr .page .control .tm .item {
+    position: relative;
+}
+
+#trnr .page .control .tm .item span {
+    width: 46px;
+    height: 46px;
+    background-color: #2871b6;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    line-height: 46px;
+}
+
+#trnr .page .control .tm .item .link {
+    width: 270px;
+    height: 29px;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
+    display: inline-block;
+
+}
+
+#trnr .page .control .tm .item .link:hover {
+    color: #ffaa31;
+
+}
+
+
+
+
+
+/* 补充 视频模块 */
+#video1{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 650px;
+    background:rgba(0, 0, 0, 0.3);
+    z-index: 300;
+    display: none;
+}
+#video1 .shipin{
+    position: absolute;
+    width: 885px;
+    height: 539px;
+    background:#fff;
+    z-index: 301; 
+    left: 50%;
+    top:50%;
+    border:8px solid #ffc666;
+    transform: translate(-50%,-50%)
+}
+
+#video1 .closebtn{
+    text-align: center;
+    line-height: 50px;
+    font-size: 48px;
+    font-weight: 100;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ffc666;
+    color: #fff;
+    top: -8px;
+    right:-58px;
+    transition: all 0.2s
+}
+#video1 .closebtn:hover{
+    color: red;
+    font-size: 50px;
+}
+
+
+
