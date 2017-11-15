@@ -1,0 +1,726 @@
+@font-face {font-family: "iconfont";
+    src: url('iconfont.eot?t=1505558756313'); /* IE9*/
+    src: url('iconfont.eot?t=1505558756313#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('data:application/x-font-woff;charset=utf-8;base64,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') format('woff'),
+    url('iconfont.ttf?t=1505558756313') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('iconfont.svg?t=1505558756313#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+    font-family:"iconfont" !important;
+    font-size:16px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+
+/* ------------顶部公共登陆栏B----------- */
+#top-info{
+    height: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+#top-info p{
+    float: left;
+}
+
+#top-info ul{
+    float: right;
+    width: 335px;
+}
+#top-info ul li{
+    float: left;
+    margin: 0 22px;
+}
+/* ------------顶部公共登陆栏E---------- */
+
+
+/* --------------点击登陆出现的登陆框B------------------- */
+#login{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+#login .login-box{
+    width: 618px;
+    height: 368px;
+    background: #fff;
+    border: 1px solid red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center
+}
+
+#login .login-box .p1{
+    padding-top: 26px;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+#login .login-box p{
+    color: #666;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    /* zoom: 1; */
+}
+#login .login-box .p2 a{
+    color: #3481cf;
+    /* text-decoration: underline */
+}
+#login .login-box .p2 a:hover{
+    text-decoration: underline
+}
+
+#login .login-box .code{
+    background: #fff;
+    width: 111px;
+    height: 111px;
+    border: 1px solid #ccc;
+    padding: 3px;
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50px);
+    top:153px;
+    z-index: 999
+   
+}
+
+
+#login .login-box .sjpic{
+    width: 165px;
+    height: 500px;
+    background: url("images/code111.jpg") no-repeat;
+    position: absolute;
+    top: 117px;
+    left: 325px;
+    display: none;
+
+}
+
+/* 账号注册 */
+.login{
+    cursor: pointer
+}
+#login .login-box .zhzc{
+    position: absolute;
+    bottom: 12px;
+    right: 4px;
+
+}
+#login .login-box .zhzc li{
+    float: left;
+    font-size: 12px;
+    line-height: 12px
+}
+#login .login-box .zhzc li.line{
+    border-left: 1px solid #ccc;
+    margin: 0 12px;
+    height: 12px;
+}
+
+/*      关闭按钮        */
+#login .login-box .close{
+    width: 50px;
+    height: 20px;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-left: 1px soild #ccc;
+    cursor: pointer;
+}
+
+
+/* --------------点击登陆出现的登陆框E------------------- */
+
+/* ------------------logo栏-B---------- */
+#logoBar {
+    height: 80px;
+    background-color: #ffd92c;
+    line-height: 80px;
+}
+/* 聚成品 logo */
+#logoBar a.logo{
+    width: 138px;
+    height: 64px;
+    margin: 8px 20px 0 0;
+    background: url(images/top-logob.png) no-repeat;
+    float: left;
+    text-indent:-100px;
+    overflow: hidden;
+}
+/* 冒险岛2 logo */
+#logoBar div a{
+    width:97px;
+    height:55px; 
+    float: left;
+    margin-top: 12px;
+    background:url(images/logo-mxd2.png) no-repeat;
+    text-indent: -400px;
+    overflow: hidden;
+}
+/* 右侧卡通 logo */
+#logoBar div img{
+    float:right;
+    margin: 8px 16px 0 0;
+}
+
+/* ------------------logo栏--E--------- */
+
+
+
+/* -------------------banner   B--------- */
+/* banner上层的小导航 00000000000000*/
+#banner{
+    position: relative;
+    height: 392px;
+    /* width: 1280px; */
+}
+#banner .menu {
+    height: 78px;
+    width: 100%;
+    line-height: 78px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+/* banner上层的小导航的logo */
+#banner .menu .leftLogo{
+    width: 215px;
+    height: 35px;
+    margin: 21px 105px 0 24px;
+}
+
+#banner .menu .leftLogo a{
+    float: left
+}
+#banner .menu .leftLogo .f1{
+    width: 33px;
+    height: 33px;
+    /* display: block; */
+    background: url(images/ico_custom.png) no-repeat -4px -428px;
+}
+#banner .menu .leftLogo .f2{
+    /* display: block; */
+    width: 160px;
+    height: 16px;
+    margin: 9px 0 0 15px;
+    background: url(images/ico_custom.png) no-repeat -4px -557px;
+}
+/* banner上层的小导航中间的商品分类all-class */
+#banner .menu .all-class{
+    padding-top: 26px;
+    /* height: 78px; */
+}
+/* 所有商品分类 */
+#banner .menu .all-class a{
+    float: left;
+    height: 27px;
+    line-height: 27px;
+    font-size: 16px;
+    padding: 0 24px;
+    color: #fff;
+    position: relative;
+}
+#banner .menu .all-class a.current{
+    color: #333;
+}
+/* 商品分类小导航 */
+#banner .menu .all-class li.line{
+    float: left;
+    height: 16px;
+    border-left: 1px solid #fff;
+    margin: 5px 24px 0 24px;
+} 
+#banner .menu .all-class li.current{
+    border-left: 1px solid #333;
+    
+}
+#banner .menu .all-class li{
+    height: 26px;
+    cursor: pointer;
+    line-height:26px;
+    font-size: 16px; 
+    color: #fff;
+    float: left;    
+}
+#banner .menu .all-class li.current1{
+    color: #333 
+}
+
+/* 搜索框*/
+#banner .menu{
+    position: absolute;
+}
+#banner .menu .search{
+    height: 29px;
+    border-radius: 30px;
+    border:1px solid #5e9cf5;
+    font-size: 14px;
+    margin-top: 26px;
+}
+#banner .menu .search .btn{
+    width: 20px;
+    height: 20px;
+    float: left;
+    font-size:20px;
+    color:#5e9cf5;
+    background:rgba(0,0,0,0);
+    margin: 5px 0 0 11px;
+}
+#banner .menu .search input{
+    float: left;
+    width: 115px;
+    height: 29px;
+    line-height:29px;
+    color:#9bc1f9; 
+    padding-left: 10px;
+    background: rgba(0,0,0,0)
+}
+#banner .menu .mycart{
+    margin-top: 2px;
+    color: #9bc1f9;
+    width: 28px;
+    height: 28px;
+    font-size: 25px;
+    padding-left: 10px;
+    position: relative;
+}
+#banner .menu .mycart:before{
+    content: "0";
+    width:20px;
+    height:28px;
+    position: absolute;
+    left: 18px;
+    top: 2px;
+    font-size: 14px;
+    }
+/* 下拉白 */
+
+#banner .menu .xiala{
+    display: none;
+    position: absolute;
+    top: 0;
+    background:rgba(0,0,0,0.5);
+    width: 100%;
+    height: 320px;
+    z-index: -1
+}
+#banner .menu .xiala ul{
+   position: absolute;
+   top: 78px;
+   left: 380px;
+   font-size: 14px;
+
+}
+#banner .menu .xiala ul li{
+    color: #fff;
+    height: 50px;
+    line-height: 40px;
+    cursor: pointer
+}
+
+
+
+
+
+/* 轮播图!!!!!!!!!!!!!!!! */
+#banBox {
+    height: 393px;
+}
+#bannBox .screen{
+    margin: 0 auto;
+    width: 1349px;
+    height: 393px;
+    position: relative;
+    overflow:hidden
+}
+/*轮播的ul */
+#banner .screen ul{
+    width: 8094px;
+    /* height: 393px; */
+    position:absolute;
+    left:0;
+    top: 0;
+    
+}
+#banner .screen ul li{
+    float: left;
+}
+#banner .screen ul img{
+    float: left;
+    width: 1349px;
+    /* margin: 0 auto; */
+    /* min-height: 349px; */
+    height: auto;
+    /* min-width: 1280px; */
+    /* width: 100%; */
+    vertical-align: bottom;
+    font-size: 0;
+    border: 0;
+    /* display: none; */
+}
+/* 轮播图小点 */
+#banner .screen ol{
+    width: 100px;
+    height: 13px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    line-height: 20px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+
+#banner .screen ol li{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 4px;
+    background: #5e9cf5
+}
+#banner .screen ol .current{
+    background:#fff
+} 
+
+/* 左右按钮 */
+#banner .bannBox .arr{
+    opacity: 0;
+    z-index: 1000;
+}
+#banner .bannBox .arr span{
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transform : translateY(- 50%);
+}
+#banner .bannBox .arr span:last-child{
+    right: 5px;
+    left: auto;
+}
+
+
+
+/* -------------------banner   E--------- */
+
+
+/* -------------------mian  B----------------------- */
+/* 主要展示区 */
+#mian .mian-dav{
+    margin: 20px auto 0;
+    width:  1138px;
+    height: auto
+}
+#mian .mian-dav li{
+    float: left;
+    margin: 0 20px 20px 0;
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: top 0.3s ease;
+    /* box-shadow:水平阴影 垂直阴影 模糊度 阴影尺寸 阴影颜色  内/外阴影； */
+    box-shadow: 0px 0px;
+}
+#mian .mian-dav li:hover{
+    box-shadow:10px 10px 10px 10px #ccc inset,10px 10px 20px  #000;
+   top: -6px;
+
+}
+#mian .mian-dav li.ma-r0{
+    margin-right: 0;
+}
+
+/* 加入动态效果 */
+#ani-box{
+    position: relative;
+}
+#ani-box img:nth-child(2){
+    width: 50px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    opacity: 0.3;
+}
+
+
+/* 动态区 */
+
+
+#mian .am-adv ul li{
+ display: none
+}
+
+/* 周边娃娃 ===*/
+#mian .zbww{
+    text-align: center;
+    position: relative;
+    width:1138px;
+    height: 190px;
+    margin: 67px auto 0;
+    
+}
+/* 周边娃娃链接 */
+#mian .zbww ul{
+    position: absolute;
+    left: 216px;
+    top: 0px;
+}
+#mian .zbww ul li{
+    float: left;
+}
+#mian .zbww ul li a{
+    display: block;
+    width: 116px;
+    height: 198px;
+    margin: 0 45px;
+}
+
+/* 产品展示  阿姆 小水 大可*/
+#mian .left-adv{
+    width: 1138px;
+    display: none;
+    margin: 66px auto;
+}
+#mian .left-adv li{
+    margin: 0 20px 20px 0;
+    float: left;
+    /* cursor: pointer */
+}
+#mian .left-adv li:nth-child(2){
+    margin-right: 0px;
+}
+#mian .left-adv li:nth-child(5){
+    margin-right: 0px;
+}
+#mian .left-adv .big-pic{
+    margin-top: 16px;
+}
+#mian .left-adv .adv-info{
+ width: 365px;
+ height: 575px;
+}
+#mian .left-adv .adv-info div{
+    height: 337px;
+    width: 365px;
+}
+#mian .left-adv .adv-info p{
+    padding-bottom: 4px;
+    margin: 12px auto;
+    width: 365px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #aeadac;
+}
+#mian .left-adv .adv-info div a{
+    text-align: center;
+    line-height: 62px;
+    font-size: 16px;
+    text-indent:-20px;
+    display: block;
+    width: 361px;
+    height: 60px;
+    border: 2px solid #f6f6f6;
+    /* padding-bottom: 40px */
+}
+#mian .left-adv .adv-info div a span{
+    font-size: 18px;
+    margin-left: 14px;
+    color: #e6e6e6;
+}
+#mian .left-adv .adv-info>a{
+    display: block;
+    margin-top: 63px;
+    width: 365px;
+    height: 175px;
+}
+
+#mian .gtbox{
+    width: 1152px;
+    height: 161px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+#mian .gtbox a:nth-child(2){
+    display: inline-block;
+    width: 240px;
+    height: 161px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+#mian .gtbox a:last-child{
+    width: 340px;
+    height: 161px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* 底部二维码 */
+#mian .codebox{
+    margin: 110px 0;
+}
+#mian .codebox li{
+    width: 151px;
+    height: 148px;
+    float:left;
+    margin-left: 91px;
+    
+}
+
+
+
+
+/* -------------------mian  E----------------------- */
+
+
+
+/* --------------------footer B-------------------------------- */
+#footer{
+    background: #121212
+}
+/* foot1 */
+#footer .foot1{
+    padding: 48px 0;
+    border-bottom: 1px solid #606060
+}
+
+#footer .footLogo{
+    float: left;
+    width: 320px;
+    height: 135px;
+    border-right: 1px solid #606060;
+    background: url("images/djc_logo.png") no-repeat 80px 0;
+}
+
+#footer .guild{
+    border-right: 1px solid #606060;
+    float: left;
+    width: 395px;
+    height: 135px;
+}
+#footer .guild li{
+    font-size: 14px;
+    float: left;
+    width: 118px;
+    height: 55px;
+    padding: 0 38px;
+}
+#footer .guild li a{
+    float: left;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+}
+#footer .guild li i{
+    float: left;
+    line-height: 30px;
+    margin-right: 5px;
+    font-size: 30px;
+    color:#EED1A2;
+}
+
+#footer .foot-code ul{
+    float: left;
+}
+#footer .foot-code li{
+    float: left;
+    padding-left: 65px;
+}
+/* foot2 */
+
+#footer .foot2{
+    height: 80px;
+}
+
+
+#mian .left-adv li{
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: top 0.3s ease;
+    /* box-shadow:水平阴影 垂直阴影 模糊度 阴影尺寸 阴影颜色  内/外阴影； */
+    box-shadow: 0px 0px;
+}
+#mian .left-adv li:hover{
+    box-shadow:10px 10px 10px 10px #ccc inset,10px 10px 20px  #000;
+   top: -6px;
+
+}
+/* --------------------footer E-------------------------------- */
+
+
+
+
+        /* 补充 视频模块 */
+        #video1{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 650px;
+            background:rgba(0, 0, 0, 0.3);
+            z-index: 300;
+            display: none;
+        }
+        #video1 .shipin{
+            position: absolute;
+            width: 885px;
+            height: 539px;
+            z-index: 301;
+            background: #000;
+            left: 50%;
+            top:50%;
+            border:8px solid #ffc666;
+            transform: translate(-50%,-50%)
+        }
+        #video1 .shipin .sp{
+            left: 0;
+            top: 0;
+            position: absolute;
+            z-index: 302;
+        }
+
+        #video1 .closebtn{
+            text-align: center;
+            line-height: 50px;
+            font-size: 48px;
+            font-weight: 100;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: #ffc666;
+            color: #fff;
+            top: -8px;
+            right:-58px;
+            transition: all 0.2s
+        }
+        #video1 .closebtn:hover{
+            color: red;
+            font-size: 50px;
+        }

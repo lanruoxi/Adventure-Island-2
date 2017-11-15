@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>来自北冰洋的风</title>
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="stylesheet" href="mall.css" />
+    <style>
+        /* *{
+            display: none;
+        } */
+        /* #mian .am-adv ul li{
+            display: none
+        } */
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <!-- <script>
+        $(function(){
+            var num=0;
+            setInterval(function(){
+                num++
+                console.log(1);
+                $("div:eq("+num+")").show(num+"000")
+            },500)
+        })
+    </script> -->
+</head>
+
+<body>
+    <!-- 通用登陆栏--------------------- -->
+    <div id="top-info">
+        <div class="container clearfix">
+            <p>聚诚品，个性彰显，品质至上</p>
+            <ul>
+                <li class="login">你好,请登录</li>
+                <li>游戏导航</li>
+                <li>移动商城</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 点击登陆出现的登陆栏-->
+    <div id="login">
+        <div class="bg"></div>
+        <div class="login-box">
+            <p class="p1">快速安全登录</p>
+            <p class="p2">请使用<a href="">QQ手机版</a>扫描二维码，</p>
+            <p class="p3">安全登录，防止盗号。</p>
+            <div class="code">
+                <img src="images/ptqrshow.png" alt="">
+            </div>
+            <div class="sjpic"></div>
+            <div class="zhzc">
+                <ul>
+                    <li> <a href="#">帐号密码登录</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">注册新帐号</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">意见反馈</a></li>
+                     
+                </ul>
+            </div>
+            <div class="close">X</div>
+        </div>
+        
+
+
+    </div>
+   <!-- 登陆框的js -->
+   <script>
+        $(function(){
+            $(".login").click(function(){
+                console.log(1)
+                $("#login").show()
+            })
+
+        $("#login .code").mouseenter(function(){
+            $(this).animate({left:"-50px"})
+            $("#login .sjpic").show()
+        }).mouseleave(function(){
+            $(this).animate({left:"0"})
+            $("#login .sjpic").hide()
+        })
+
+        $("#login .close").click(function(){
+            $("#login").hide()
+        })
+        })
+
+    </script>
+
+    <!-- logo栏------------------------- -->
+    <div id="logoBar">
+        <div class="container clearfix">
+            <a class="logo" href="#">聚成品</a>
+            <div><a href="../home/index.html" target="_blank">冒险岛2</a></div>
+            <div>
+                <img src="images/mxdzb.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!--公告轮播栏------------------------>
+    <div id="banner" class="clearfix">
+
+        <!-- 轮播区-->
+        <div class="bannBox" id="bannBox">
+            <div class="screen">
+                <ul>
+                    <li><img src="images/20170908165220_285373.jpg" /></li>
+                    <li><img src="images/20170913103428_947608.jpg" /></li>
+                    <li><img src="images/20170913103455_367056.jpg" /></li>
+                    <li><img src="images/20170913103531_367471.jpg" /></li>
+                    <li><img src="images/20170913103457_434379.jpg" /></li>
+                </ul>
+                <ol>
+                    <!-- 动态创建的小方块-->
+                </ol>
+            </div>
+            <div class="arr"><span><img src="images/m_bg2_prev.jpg" alt=""></span><span><img src="images/m_bg2_next.jpg" alt=""></span></div>
+        </div>
+        <!--菜单栏-->
+        <div class="menu  clearfix">
+            <!-- 下拉白 -->
+            <div class="xiala clearfix">
+            </div>
+            <!-- 左侧的小logo -->
+            <div class="leftLogo fl">
+                <a class="f1" href="#"></a>
+                <a class="f2" href="#"></a>
+            </div>
+            <!-- //商品分类 -->
+            <div class="all-class fl clearfix">
+                <a href="#">所有商品分类</a>
+                <div class="smallNav fl">
+                    <ul>
+                        <li class="line "></li>
+                        <li>新品上市</li>
+                        <li class="line "></li>
+                        <li>经典归来</li>
+                        <li class="line"></li>
+                        <li>甜蜜助攻</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- mycart购物栏图标 -->
+            <div class="mycart fr iconfont">&#xe60a;</div>
+            <!-- 搜索框 -->
+            <div class="search fr">
+                <button class="iconfont btn">&#xe60c;</button>
+                <input type="text" value="搜索商品">
+            </div>
+        </div>
+    </div>
+        <!-- 下拉jq特效 -->
+        <script>
+            $(function(){
+                $(".menu").mouseenter(function(){
+                    console.log(1)
+                    $(".menu .xiala").stop().slideDown(1000)
+                    $("")
+                })
+                .mouseleave(function(){
+                    $(".menu .xiala").stop().slideUp(1000) 
+                })
+                
+                
+            })
+
+
+        </script>
+
+    <!-- 主内容区-------------------------------- -->
+    <div id="mian">
+        <!-- 版心 ---------->
+        <!-- 主要展示区 --- -->
+        <div class="mian-dav container clearfix">
+            <ul>
+                <li><a href="#"><img src="images/main-t1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/main-t2.jpg" alt=""></a></li>
+                <li class="ma-r0"><a href="#"><img src="images/main-t3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/main-t4.jpg" alt=""></a></li>
+                <li class="ma-r0"><a href="#"><img src="images/main-t5.jpg" alt=""></a></li>
+            </ul>
+
+
+        </div>
+
+        <!-- 周边娃娃 ------>
+        <div class="zbww contaner clearfix">
+            <img src="images/zb-ww.jpg" alt="">
+            <ul>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+
+            </ul>
+        </div>
+        <!-- 加入的两个卡通人物动画效果 -->
+        <div id="ani-box">
+            <img id="pic-qishi" src="images/shiqi (1).png" alt="">
+            <img src="images/arrdown.jpg">
+            <img id="pic-gongjian" src="images/gongjian (1).png" alt="">
+            <div></div>
+        </div>
+        <script>
+            var qishi = document.getElementById("pic-qishi")
+            var gongjian = document.getElementById("pic-gongjian")
+            var count1 = 0;
+            var count2 = 0;
+            setInterval(function () {
+                count1++
+                qishi.src = "images/shiqi (" + count1 + ").png"
+                if (count1 == 32) {
+                    count1 = 1
+                }
+            }, 100)
+            setInterval(function () {
+                count2++
+                gongjian.src = "images/gongjian (" + count2 + ").png"
+                if (count2 == 32) {
+                    count2 = 1
+                }
+            }, 100)
+        </script>
+        <!-- 产品展示 阿姆 ------>
+        <div class="am-adv left-adv clearfix">
+            <ul>
+                <li class="adv-info">
+                    <div>
+                        <img src="images/am_zb.png" alt="">
+                        <p>一个废柴少年菇，从不浪费时间谈理想，对阿拇来说，好好睡觉才是正经事。当然，人生最拉风的事莫过于，我很胖但依旧吃给你看</p>
+                        <a href="#">更多阿姆周边 <span> &gt</span> </a>
+                    </div>
+                    <a href="#"><img src="images/am1.jpg" alt=""></a>
+                </li>
+                <li class="big-pic"><a href="#"><img src="images/am2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/am3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/am4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/am5.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <!-- //图片的渐入效果 -->
+        <script>
+            var timer = null;
+            $("#ani-box img").eq(1).click(function () {
+                var num = 0;
+                timer = setInterval(function () {
+                    console.log(1);
+                    $("#mian .am-adv ul li:eq(" + num + ")").show(num + "000")
+                    num++
+                    // ']/'
+
+                }, 500)
+                setTimeout(function(){
+                    timer = null;
+                },4000)
+            })
+            // var aniBox = document.getElementById("ani-box")
+            // aniBox.onclick = function () {
+            //     var num = 0;
+            //     setInterval(function () {
+            //         console.log(1);
+            //         $("#mian .am-adv ul li:eq(" + num + ")").show(num + "000")
+            //         num++
+            //     }, 500)
+            // }
+            //bug  怎么停止
+//            $(window).scroll(function () {
+//                if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+//                    timer = null;
+//                }
+//            });
+        </script>
+        <!-- 产品展示 小水------>
+        <div class="xs-adv left-adv clearfix">
+            <ul>
+                <li class="big-pic"><a href="#"><img src="images/xs1.jpg" alt=""></a></li>
+                <li class="adv-info">
+                    <div>
+                        <img src="images/xs_zb.png" alt="">
+                        <p>一个废柴少年菇，从不浪费时间谈理想，对阿拇来说，好好睡觉才是正经事。当然，人生最拉风的事莫过于，我很胖但依旧吃给你看</p>
+                        <a href="#">更多阿姆周边 <span> &gt</span></a>
+                    </div>
+                    <a href="#"><img src="images/xs2.jpg" alt=""></a>
+                </li>
+                <li><a href="#"><img src="images/xs3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/xs4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/xs5.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <!-- 产品展示 大可 ------>
+        <div class="dk-adv left-adv clearfix">
+            <ul>
+                <li class="adv-info">
+                    <div>
+                        <img src="images/dk1.png" alt="">
+                        <p>一个废柴少年菇，从不浪费时间谈理想，对阿拇来说，好好睡觉才是正经事。当然，人生最拉风的事莫过于，我很胖但依旧吃给你看</p>
+                        <a href="#">更多阿姆周边 <span> &gt</span></a>
+                    </div>
+                    <a href="#"><img src="images/dk2.jpg" alt=""></a>
+                </li>
+                <li class="big-pic"><a href="#"><img src="images/dk3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/dk4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/dk5.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/dk6.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <!-- 产品展示 蛋蛋 ------>
+        <div class="dd-adv left-adv clearfix">
+            <ul>
+                <li class="big-pic"><a href="#"><img src="images/dd1.jpg" alt=""></a></li>
+                <li class="adv-info">
+                    <div>
+                        <img src="images/dd2.png" alt="">
+                        <p>一个废柴少年菇，从不浪费时间谈理想，对阿拇来说，好好睡觉才是正经事。当然，人生最拉风的事莫过于，我很胖但依旧吃给你看</p>
+                        <a href="#">更多阿姆周边 <span> &gt</span></a>
+                    </div>
+                    <a href="#"><img src="images/dd3.jpg" alt=""></a>
+                </li>
+
+                <li><a href="#"><img src="images/dd4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/dd5.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/dd6.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <!-- 产品展示 纪念品 ------>
+        <div class="jn-adv left-adv clearfix">
+            <ul>
+
+                <li class="adv-info">
+                    <div>
+                        <img src="images/jn1.png" alt="">
+                        <p>一个废柴少年菇，从不浪费时间谈理想，对阿拇来说，好好睡觉才是正经事。当然，人生最拉风的事莫过于，我很胖但依旧吃给你看</p>
+                        <a href="#">更多阿姆周边 <span> &gt</span></a>
+                    </div>
+                    <a href="#"><img src="images/jn2.jpg" alt=""></a>
+                </li>
+                <li class="big-pic"><a href="#"><img src="images/jn3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/jn4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/jn5.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/jn6.jpg" alt=""></a></li>
+            </ul>
+        </div>
+
+        <!-- 尬萌特攻队 -->
+        <div class="gtbox">
+            <img src="images/bg-gt.jpg" alt="">
+            <a href="#"></a>
+            <a href="#"></a>
+        </div>
+        <!-- 二维码区 -->
+        <div class="codebox container clearfix">
+            <ul id="code-ul">
+
+            </ul>
+        </div>
+    </div>
+    <script>
+            (function () {
+                var codeArr = ["code_gzh.png", "code_sq.png", "code_zb.png", "code_gw.png", "code_lb.png"]
+                var codeUl = document.getElementById("code-ul")
+                var lis = codeUl.children
+                var li;
+                for (var i = 0; lis.length < 5; i++) {
+                    var index = i
+                    li = document.createElement("li")
+                    li.style.background = "url(images/" + codeArr[index] + ") no-repeat"
+                    codeUl.appendChild(li)
+                }
+            })()
+    </script>
+
+    <!--底部-->
+    <div id="footer">
+        <div class="foot1 container clearfix">
+            <div class="footLogo">
+                <a href="#"></a>
+            </div>
+            <div class="guild">
+                <ul>
+                    <li><i class="iconfont">&#xe61d;</i><a href="#">购物指南</a></li>
+                    <li><i class="iconfont">&#xe62b;</i><a href="#">配送方式</a></li>
+                    <li><i class="iconfont">&#xe6be;</i><a href="#">常见操作</a></li>
+                    <li><i class="iconfont">&#xe67a;</i><a href="#">售后服务</a></li>
+                    <li><i class="iconfont">&#xe625;</i><a href="#">关于我们</a></li>
+                </ul>
+            </div>
+            <div class="foot-code">
+                <ul>
+                    <li><img src="images/djc_gzh.jpg" width="120px" alt=""></li>
+                    <li><img src="images/djc_app.png" width="120px" alt=""></li>
+                    <li><img src="images/code.png.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot2 container clearfix">
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- js中常用的函数封装 -->
+    <script src="common.js"></script>
+    <!-- js中外链的js样式 -->
+    <script src="mall.js"></script>
+
+</body>
+
+</html>
