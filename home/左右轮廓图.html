@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body, ul, ol, li, img {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    #box {
+      width: 490px;
+      height: 270px;
+      padding: 5px;
+      position: relative;
+      border: 1px solid #ccc;
+      margin: 100px auto 0;
+    }
+    
+    .ad {
+      width: 490px;
+      height: 270px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    #box img {
+      width: 490px;
+    }
+    
+    .ad ol {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+    }
+    
+    .ad ol li {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      border: 1px solid #ccc;
+      text-align: center;
+      background: #fff;
+      float: left;
+      margin-right: 10px;
+      cursor: pointer;
+      _display: inline;
+    }
+    
+    .ad ol li.current {
+      background: yellow;
+    }
+    
+    .ad ul li {
+      float: left;
+    }
+    
+    .ad ul {
+      position: absolute;
+      top: 0;
+      width: 2940px;
+    }
+    
+    .ad ul li.current {
+      display: block;
+    }
+    
+    #arr {
+      display: none;
+    }
+    
+    #arr span {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      margin-top: -20px;
+      background: #000;
+      cursor: pointer;
+      line-height: 40px;
+      text-align: center;
+      font-weight: bold;
+      font-family: '黑体';
+      font-size: 30px;
+      color: #fff;
+      opacity: 0.3;
+      border: 1px solid #fff;
+    }
+    
+    #arr #right {
+      right: 5px;
+      left: auto;
+    }
+  </style>
+</head>
+<body>
+<div id="box" class="all">
+  <div class="ad">
+    <ul id="imgs">
+      <li><img src="images/1.jpg"/></li>
+      <li><img src="images/2.jpg"/></li>
+      <li><img src="images/3.jpg"/></li>
+      <li><img src="images/4.jpg"/></li>
+      <li><img src="images/5.jpg"/></li>
+    </ul>
+  </div>
+  <div id="arr">
+    <span id="left">&lt;</span>
+    <span id="right">&gt;</span>
+  </div>
+</div>
+
+<script>
+  //1 获取元素
+  var box = document.getElementById("box");
+  var ad = box.children[0];//可视区域
+  var imgWidth = ad.offsetWidth;//获取可视区域宽度
+  var list = ad.children[0];
+  var Length=ad.children[0].children.length;
+  var arrBox = box.children[1];
+  var arrLeft = arrBox.children[0];
+  var arrRight = arrBox.children[1];
+  var count=0;
+  
+  //2 鼠标移入移出大盒子，设置内部的箭头显示隐藏
+ box.onmouseover=function(){
+   arrBox.style.display="block";
+ };
+  box.onmouseout=function(){
+    arrBox.style.display="none";
+  }
+  //3 左右箭头操作
+  //可以使用计数的方式，记录当前滚出可视区域的图片张数，根据张数设置运动效果
+  arrRight.onclick=function(){
+    if(count<Length-1){
+      count++;
+      animate(list,-count*imgWidth)
+    }
+  };
+  arrLeft.onclick=function(){
+    if(count>0){
+      count--;
+      animate(list,-count*imgWidth)
+    }
+  }
+  function animate(element, target) {
+    clearInterval(element.timer);//清除旧的定时器，保证匀速运动，防止加速效果
+    element.timer = setInterval(function () {
+      //1 获取元素当前位置 使用offsetLeft属性
+      var current = element.offsetLeft;
+      //2 设置步长
+      var step = 17;
+      //根据当前位置和目标位置的大小关系进行判断
+      step = target > current ? step : -step;
+      //5 运动条件设置
+      //检测当前位置和目标位置之间的距离，如果满足一个step的距离，可以运动，否则直接运动到目标位置，结束
+      if (Math.abs(target - current) > Math.abs(step)) {
+        //3 设置运动公式:元素位置(新) = 元素位置(旧) + 步长;
+        current = current + step;
+        //4 设置给元素的left值运动
+        element.style.left = current + "px";
+      } else {
+        //6 让element直接运动到目标位置，再清除定时器
+        element.style.left = target + "px";
+        clearInterval(element.timer);
+      }
+    }, 20);
+  }
+</script>
+</body>
+</html>
