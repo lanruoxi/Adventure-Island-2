@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="gb2312">
+    <meta name="robots" content="all">
+    <meta name="author" content="Tencent-TGideas">
+    <meta name="Copyright" content="Tencent">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="Keywords" content="冒险岛2,冒险岛2官网,冒险岛2官方网站,腾讯冒险岛2,腾讯冒险岛2官网,冒险岛2下载,冒险岛2活动,冒险岛,冒险岛第二部,冒险岛2客户端下载,方块网游,冒险岛2论坛,冒险岛2社区" />
+<meta name="Description" content="《冒险岛2》官方网站，是腾讯旗下全新网游大作，延续了《冒险岛》的经典游戏品牌并融入沙盒玩法，是一款拥有萌爆的可爱画面、创新的房屋系统、自由丰富的DIY系统及多种小游戏玩法的休闲网游。" />
+    <title>平行世界-冒险岛2-官方网站-腾讯游戏</title>
+    <!--页面设计：小彦 | 页面制作：Len | 创建： | 团队博客：http://tgideas.qq.com/ -->
+    <style>
+        body,dl,dd,ul,ol,h1,h2,h3,h4,h5,h6,p,form{margin:0}
+        body,button,input,select,textarea{font:12px/1.5 tahoma,"\5FAE\8F6F\96C5\9ED1",sans-serif}
+        h1,h2,h3,h4,h5,h6{font-size:100%}
+        em,b{font-style:normal}
+        a{text-decoration:none}
+        a:hover{text-decoration:underline}
+        img{border:0;vertical-align: bottom;}
+        button,input,select,textarea{font-size:100%;outline:none}
+        table{border-collapse:collapse;border-spacing:0}
+        td,th,ul,ol{padding:0}
+        ul,ol{list-style:none;}
+        body{padding-top:42px;min-width:1340px;background:#000}
+        html{ background: #000;}
+        a,a:hover{text-decoration:none;}
+        a:focus{outline:0}
+        .cf{*zoom:1;}
+        .cf:after{content:""; display:block; height:0; clear:both; overflow:hidden;}
+        .clear {clear:both; height:0px; overflow:hidden;}
+        .hide{display:none}
+        .ishow{display:block!important}
+        .ht{text-indent:-9999px;overflow:hidden}
+        #footer_ied{background:#000;height:60px; padding-top: 20px; padding-bottom: 20px; text-align: center; color: #5d5d5d; font-size: 12px; line-height: 20px;}
+        #footer_ied a{
+            text-decoration: none;
+            color: #5d5d5d;
+        }
+
+        @font-face {font-family: "iconfont";
+            src: url("iconfont.eot-t=1486277894602")/*tpa=http://mxd2.qq.com/act/a20170206world/font/iconfont.eot?t=1486277894602*/;
+            src: url("iconfont.eot-t=1486277894602#iefix")/*tpa=http://mxd2.qq.com/act/a20170206world/font/iconfont.eot?t=1486277894602#iefix*/ format('embedded-opentype'),
+            url("iconfont.woff-t=1486277894602")/*tpa=http://mxd2.qq.com/act/a20170206world/font/iconfont.woff?t=1486277894602*/ format('woff'),
+            url("iconfont.ttf-t=1486277894602")/*tpa=http://mxd2.qq.com/act/a20170206world/font/iconfont.ttf?t=1486277894602*/ format('truetype'),
+            url("iconfont.svg-t=1486277894602#iconfont")/*tpa=http://mxd2.qq.com/act/a20170206world/font/iconfont.svg?t=1486277894602#iconfont*/ format('svg');
+        }
+
+        .icf {
+            font-family:"iconfont" !important;
+            font-size:16px;
+            font-style:normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .ico-music:before { content: "\e651"; }
+        .ico-gallery:before { content: "\e652"; }
+        .ico-star:before { content: "\e653"; }
+        .ico-audio-on:before { content: "\e654"; }
+        .ico-works:before { content: "\e655"; }
+        .ico-audio-off:before { content: "\e656"; }
+        .ico-close:before { content: "\e657"; }
+        .ico-prev:before { content: "\e658"; }
+        .ico-next:before { content: "\e659"; }
+        .ico-cube:before { content: "\e65a"; }
+        .ico-map:before { content: "\e65b"; }
+        .ico-man:before { content: "\e65c"; }
+        .ico-hexagon-light:before { content: "\e65d"; }
+        .ico-hexagon-dark:before { content: "\e65e"; }
+        .ico-home:before { content: "\e65f"; }
+        .ico-play:before { content: "\e660"; }
+        .ico-pause:before { content: "\e661"; }
+
+        body{
+            background:#000;
+            color: #fff;
+        }
+        #stage{
+            background:#2e3444;
+            width: 100%;
+            height: 800px;
+            max-width:1920px;
+            margin:0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        #header{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            z-index: 105;
+            height: 86px;
+            top:-85px;
+        }
+        #header .header-bg{
+            background:#000;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-bottom:1px solid #1a1a1a;
+            left: 0;
+            top: 0;
+            opacity: .2;
+            filter:alpha(opacity=20);
+        }
+        #header h2{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background:url(ms_logo.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/ms_logo.png*/ no-repeat 0 0;
+            width: 148px;
+            height: 158px;
+            z-index: 90;
+            top:-73px;
+        }
+        #header .ch-nav{
+            width: 100%;
+            position: absolute;
+            height: 100%;
+            text-align: center;
+            font-size: 0;
+            top:-85px;
+        }
+        #header .ch-nav ul{
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+            height: 38px;
+            margin-top: 25px;
+        }
+        .ch-nav li{
+            float: left;
+            height: 38px;
+            width:100px;
+            position: relative;
+        }
+        .ch-nav li span,.ch-nav li i{
+            display: block;
+            height: 1px;
+            overflow: hidden;
+            width:87px;
+            background:#fff;
+            opacity: .1;
+            filter:alpha(opacity=10);
+            position: absolute;
+            top:48%;
+            left:13%;
+            z-index: 5;
+        }
+        .ch-nav li i{
+            width:0;
+            background:#fdc014;
+        }
+        .ch-nav li.ch-on i{
+            width:87px;
+            opacity: 1;
+            filter:alpha(opacity=100);
+        }
+        .ch-nav li.ch-cur i{
+            width:0;
+            opacity: .1;
+            filter:alpha(opacity=10);
+        }
+        .ch-nav li a{
+            width:13px;
+            height:15px;
+            display: block;
+            background:url(chapter_box.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/chapter_box.png*/ no-repeat -13px -38px;
+            top: 11px;
+            text-indent: -999em;
+            opacity: .5;
+            position: absolute;
+            z-index: 10;
+            /*-webkit-transition:all .4s;
+            transition:all .4s;*/
+        }
+        .ch-nav .ch-index{
+            width: 34px;
+            height: 38px;
+            top: 0;
+            opacity: 1;
+            background-position:0 0;
+        }
+        .ch-nav .ch-close .ch-index{
+            background-position:-34px 0;
+        }
+        .ch-nav .ch-on a{
+            background-position:0 -38px;
+            opacity: 1;
+        }
+        .ch-nav .ch-on .ch-index , .ch-nav .ch-cur .ch-index{
+            background-position:0 0;
+        }
+        .ch-nav .ch-cur a{
+            background-position:0 -38px;
+            opacity: 1;
+        }
+        .ch-nav .ch-close{
+            width: 34px;
+            overflow: hidden;
+        }
+        .bg , .mask , .page{
+            position: absolute;
+            width: 1920px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            margin-left: -960px;
+        }
+
+        #header .ms-nav{
+            width: 410px;
+            padding:0 20px;
+            position: absolute;
+            height: 85px;
+            right: 0;
+            top: 0;
+        }
+        #header .ms-no-space{
+            width: 140px;
+            overflow: hidden;
+        }
+        #header .ms-no-space .pos-r:before{
+            position: absolute;
+            content:'<';
+            font-family: arial sans-serif;
+            color:#616161;
+            font-size: 16px;
+            display:block;
+            width:10px;
+            height: 85px;
+            line-height: 85px;
+            text-align: center;
+            left:-10px;
+            top:0;
+        }
+        #header .ms-no-space:hover{
+            width: 410px;
+        }
+        #header .ms-no-space:hover .pos-r:before{
+            display: none;
+        }
+        .ms-nav-bg{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: .2;
+            filter:alpha(opacity=20);
+        }
+        .ms-nav .pos-r{
+            z-index: 90;
+            padding-top: 20px;
+        }
+        .ms-nav .ms-cat{
+            float: right;
+            height: 20px;
+            padding-right: 5px;
+            position: relative;
+        }
+        .ms-nav .ms-cat:after{
+            content:'';
+            display: block;
+            height: 10px;
+            top:20px;
+            position: absolute;
+            width:1px;
+            background:#fff;
+            opacity: .3;
+            filter:alpha(opacity=30);
+            right:0;
+        }
+        .ms-cat li{
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+            width: 50px;
+            height: 50px;
+        }
+        .ms-cat li a{
+            display: block;
+            position: relative;
+            padding-top: 15px;
+            text-align: center;
+        }
+        .ms-cat .icf{
+            color: #fff;
+            opacity: .3;
+            filter:alpha(opacity=30);
+            text-decoration: none;
+            display: block;
+            height: 20px;
+            line-height: 20px;
+            font-size: 20px;
+            transition:all .2s;
+        }
+        .ms-cat span{
+            display: block;
+            position: absolute;
+            width: 100%;
+            top:33px;
+            left:0;
+            color: #fff;
+            opacity: 0;
+            filter:alpha(opacity=0);
+            transition:all .2s;
+        }
+        .ms-cat :hover .icf , .ms-cat .active .icf{
+            opacity: 1;
+            filter:alpha(opacity=100);
+            color: #ffaa31;
+        }
+        .ms-cat :hover span , .ms-cat .active span{
+            opacity: 1;
+            filter:alpha(opacity=100);
+            top: 38px;
+            color: #ffaa31;
+        }
+        .ms-audio{
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            float: right;
+            display: block;
+        }
+        .ms-audio a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            opacity: .3;
+            filter:alpha(opacity=30);
+        }
+        .ms-audio a .icf{
+            font-size: 26px;
+            line-height: 50px;
+            color: #fff;
+        }
+        #header .logo{
+            background:url(h_logo.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/h_logo.png*/ no-repeat 0 0 ;
+            width: 89px;
+            height: 48px;
+            overflow: hidden;
+            display: block;
+            float: right;
+            text-indent: -999em;
+        }
+        #header .logo a{
+            display: block;
+            text-indent: -999em;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+        }
+
+        .bg{
+            z-index: 10;
+            background-position:100% 100%;
+            background-color:#2e3444;
+            background-repeat:no-repeat;
+        }
+        .mask{
+            z-index: 20;
+            background:url(mask.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/mask.png*/ repeat 0 0;
+        }
+        .page{
+            z-index: 30;
+        }
+        #page-wrap{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .pos-r{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .fa{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-indent: -999em;
+        }
+        #aside{
+            position: relative;
+            width: 148px;
+            left:-148px;
+            top:0;
+            height:100%;
+            z-index: 90;
+        }
+        .darkBg{
+            background:#000;
+            background:rgba(0,0,0,.6);
+        }
+        #aside .ch-menu{
+            position: absolute;
+            width: 148px;
+            top:50%;
+            margin-top: -200px;
+        }
+        .ch-menu li{
+            height:89px;
+            border-bottom:1px dashed #4c5367;
+            position: relative;
+        }
+        .ch-menu a{
+            display: block;
+            position: absolute;
+            width:148px;
+            padding-top: 25px;
+            height: 85px;
+            color:#727680;
+            text-align: center;
+            transition:all .2s;
+            text-decoration: none;
+            left: 0;
+            top: 0;
+        }
+        .ch-menu .icf{
+            font-size: 30px;
+            line-height: 30px;
+            transition:all .2s;
+        }
+        .ch-menu span{
+            display: block;
+            font-size: 14px;
+            transition:all .2s;
+        }
+        .ch-menu a:after{
+            content:'';
+            display: block;
+            overflow: hidden;
+            height: 4px;
+            width:148px;
+            background:#ffaa31;
+            left: 0;
+            position: absolute;
+            top: 90px;
+            opacity: 0;
+            filter:alpha(opacity=0);
+            transition:all .2s;
+            *background:transparent;
+        }
+        .ch-menu a:hover , .ch-menu .active a{
+            color: #ffaa31;
+        }
+        .ch-menu a:hover:after ,.ch-menu .active a:after{
+            opacity: 1;
+            filter:alpha(opacity=100);
+            top: 86px;
+        }
+        .ch-ph-con{
+            width:680px;
+            position: absolute;
+            left: 50%;
+            top:105px;
+            margin-left: -520px;
+            z-index: 50;
+        }
+        .ch-ph-con h3{
+            margin-bottom: 10px;
+        }
+        .img-title{
+            display: block;
+            text-indent: -999em;
+            overflow: hidden;
+        }
+        .ch-ph-con h4{
+            margin-bottom: 5px;
+            color: #ffaa31;
+            font-size: 34px;
+        }
+        .ch-ph-con .ph-con{
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: justify;
+            line-height: 25px;
+            color: #ffffff;
+            max-height:325px;
+            overflow-y:auto;
+        }
+        .ch-ph-con .ph-con p{
+            text-indent: 2em;
+        }
+        .ph-ctrl{
+            margin-right: 5px;
+            float: left;
+        }
+        .ph-ctrl .icf{
+            font-size: 65px;
+            line-height: 1;
+            color: #f5f6f6;
+            opacity: .5;
+            -webkit-transition: all .2s; -moz-transition: all .2s; -ms-transition: all .2s; -o-transition: all .2s; transition: all .2s;
+        }
+        .ph-ctrl .icf:hover{
+            color: #ffaa31;
+            opacity: 1;
+        }
+
+        .ch-ph-bg , .npc-detail-view{
+            position: absolute;
+            z-index: 40;
+        }
+        .npc-detail-view{
+            width: 700px; height: 700px;
+            left: 50%;
+            bottom:0;
+            margin-left: 50px;
+        }
+
+
+        .pg{
+            height: 500px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -250px;
+        }
+        .pg-title{
+            text-align: center;
+            color: #ffffff;
+            font-size: 30px;
+            font-weight: 400;
+            height: 60px;
+            overflow: hidden;
+            margin-bottom: 35px;
+        }
+        .pg-title span{
+            display: block;
+            font-variant: small-caps;
+            font-size: 10px;
+            line-height: 1;
+            margin-top: -5px;
+            color: #94979e;
+        }
+        .main-pg .pg-title {
+            background-image: url(titles.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/titles.png*/;
+            background-repeat: no-repeat;
+            width: 250px;
+            height: 46px;
+            margin: 0 auto 49px;
+            text-indent: -999em;
+        }
+        .pg-npc .pg-title{background-position:0 -46px}
+        .pg-audio .pg-title{background-position:0 -92px}
+        .pg-gallery .pg-title{background-position:0 -184px}
+        .pg-event .pg-title{background-position:0 -138px}
+
+        .npc-filter , .gallery-filter{
+            text-align: center;
+            font-size: 0;
+            margin-bottom: 40px;
+        }
+        .npc-filter{
+            display: none;
+        }
+        .npc-filter li, .gallery-filter li{
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+            margin:0 12px;
+        }
+        .npc-filter a, .gallery-filter a{
+            display: block;
+            width: 120px;
+            height: 35px;
+            line-height: 35px;
+            font-size:20px;
+            color: #9a9ea8;
+            border:1px dashed #505669;
+        }
+        .npc-filter a.active, .gallery-filter a.active{
+            border:1px solid #ffaa31;
+            background:#ffaa31;
+            color:#2e3444;
+        }
+        .npc-list{
+            position: relative;
+            font-size: 0;
+            white-space:nowrap;
+        }
+        .pg-ch-npc .npc-list{
+            margin-top: 30px;
+        }
+        .pg-main{
+            overflow: hidden;
+            position: relative;
+            height: 405px;
+        }
+        .npc-list li{
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+            width: 214px;
+            height: 329px;
+            margin:15px;
+            -webkit-box-shadow:  0 0 20px #1a1a1a;
+            box-shadow:  0 0 20px #1a1a1a;
+        }
+        .npc-list a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            text-decoration: none;
+            overflow: hidden;
+        }
+        .npc-list a strong{
+            position: absolute;
+            font-size: 20px;
+            color:#dededf;
+            top:30px;
+            left:30px;
+            white-space:nowrap;
+            font-weight: 400;
+            z-index: 5;
+        }
+        .npc-list a i{
+            border:20px solid #fdc516;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 174px;
+            height: 289px;
+            opacity: 0;
+            filter:alpha(opacity=0);
+            display: block;
+            -webkit-transition: opacity .2s;
+            transition: opacity .2s;
+            z-index: 10;
+        }
+        .npc-list a img{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width:100%;
+            height:auto;
+            -webkit-transition: all .2s;
+            transition: all .2s;
+            z-index: 3;
+        }
+        .npc-list .active a i , .npc-list a:hover i{
+            opacity: 1;
+            filter:alpha(opacity=100);
+        }
+        .npc-list a:hover img , .npc-list .active a img{
+            width:110%;
+            left:-5%;
+        }
+        .npc-detail-con{
+            width: 740px;
+            position: absolute;
+            left:50%;
+            top:0;
+            margin-left: -615px;
+            z-index: 50;
+        }
+        .npc-detail-con h4{
+            overflow: hidden;
+            zoom:1;
+            margin-bottom: 20px;
+            color: #fff;
+            font-size: 34px;
+        }
+        .npc-detail-con h4 span{
+            display: block;
+            float: left;
+            white-space:nowrap;
+            border-bottom:4px solid #fff;
+        }
+        .npc-detail-con p{
+            text-indent: 2em;
+            font-size: 14px;
+            line-height: 25px;
+            margin-bottom: 20px;
+            color: #b1b3ba;
+        }
+        .rel-list{
+            overflow: hidden;
+            zoom:1;
+        }
+        .rel-list li{
+            float: left;
+            margin-right: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .rel-list img , .rel-list span{
+            display: block;
+            color: #b1b3ba;
+            font-size: 14px;
+        }
+        .rel-list a:hover{
+            color: #b1b3ba;
+            text-decoration: underline;
+        }
+        .audio-sec{
+            position: relative;
+            height:420px;
+            white-space:nowrap;
+        }
+        .audio-item{
+            width: 274px; height: 274px;
+            margin-left: 18px;
+            margin-right: 18px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+        }
+        .audio-item-open{
+            width:870px;
+        }
+        .audio-item .record{
+            position: absolute;
+            z-index: 3;
+            width: 274px;
+            height: 274px;
+            -webkit-border-radius:50%;
+            border-radius:50%;
+            overflow: hidden;
+            -webkit-box-shadow:  0 0 10px #1a1a1a; -moz-box-shadow:  0 0 10px #1a1a1a; box-shadow:  0 0 10px #1a1a1a;
+            left: 0;
+            top: 50%;
+            margin-top: -137px;
+            opacity: 0;
+            filter:alpha(opacity=0);
+        }
+        .audio-item-open .record{
+            left:137px;
+            opacity: 1;
+            filter:alpha(opacity=100);
+        }
+        .audio-item .cover{
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            left: 0;
+            width: 274px;
+            height: 274px;
+            overflow: hidden;
+        }
+        .audio-item .cover img{
+            width: 100%;
+            height: 100%;
+        }
+        .audio-item .play{
+            position: absolute;
+            z-index: 10;
+            width: 274px;
+            height: 274px;
+            top: 0;
+            left: 0;
+        }
+        .audio-item .play .icf{
+            font-size: 80px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -55px;
+            margin-left: -40px;
+            color:#fff;
+            text-decoration: none;
+        }
+        .audio-item .play:hover .icf{
+            color:#fdc516;
+        }
+        .audio-item .play .icf:before { content: "\e660"; }
+        .audio-item .pause .icf:before { content: "\e661"; }
+        .audio-item .border{
+            position: absolute;
+            z-index: 8;
+            width: 273px;
+            height: 274px;
+            top: -20px;
+            left: -20px;
+            border:20px solid #fdc516;
+            opacity: 0;
+            filter:alpha(opacity=0);
+        }
+        .audio-item-open .border{
+            -webkit-box-shadow:  0 0 10px #1a1a1a; -moz-box-shadow:  0 0 10px #1a1a1a; box-shadow:  0 0 10px #1a1a1a;
+            opacity: 1;
+            filter:alpha(opacity=100);
+        }
+        .audio-item .board{
+            position: absolute;
+            z-index: 1;
+            padding:25px 60px 25px 180px;
+            width: 350px;
+            height: 190px;
+            left: 0;
+            top:50%;
+            opacity: 0;
+            margin-top: -120px;
+            filter:alpha(opacity=0);
+            background:rgba(0,0,0,.5);
+        }
+        .audio-item-open .board{
+            left: 274px;
+            opacity: 1;
+            filter:alpha(opacity=100);
+        }
+        .audio-item .board h5{
+            font-weight: 400;
+            color: #fff;
+            white-space:nowrap;
+            float: left;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .audio-item .board .time{
+            float: right;
+            display: block;
+            white-space:nowrap;
+            font-size: 14px;
+            color: #949ebf;
+            line-height: 30px;
+        }
+        .audio-item .board .track{
+            height:1px;
+            width: 100%;
+            margin:40px 0 15px;
+            background:#616693;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+        }
+        .audio-item .board .track div{
+            background:#fdc516;
+            height:1px;
+            width: 0;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+        }
+        .audio-item .board p{
+            color: #868c9e;
+            line-height: 23px;
+            white-space:normal;
+            text-align:justify;
+        }
+        .audio-item .name{
+            width: 274px;
+            position: absolute;
+            top: 300px;
+            text-align: center;
+            font-size: 14px;
+            color: #a2b4ce;
+        }
+        .audio-item-open .name{
+            top: 274px;
+            opacity: 0;
+            filter:alpha(opacity=0);
+        }
+
+        .gallery-sec{
+            font-size: 0;
+            position: relative;
+            white-space:nowrap;
+        }
+        .gallery-sec .gallery-item{
+            float: left;
+            height:242px;
+            width:auto;
+            position: relative;
+            margin:0 30px;
+            padding-top: 71px;
+            text-align: center;
+            -webkit-transition: all .3s;
+            transition: all .3s;
+            overflow: hidden;
+        }
+        .gallery-sec .gallery-1{
+            width: 171px;
+        }
+        .gallery-sec .gallery-2{
+            width: 340px;
+        }
+        .gallery-sec .gallery-1:hover{
+            width: 271px;
+            height: 384px;
+            padding-top: 0;
+        }
+        .gallery-sec .gallery-2:hover{
+            width: 539px;
+            height: 384px;
+            padding-top: 0;
+        }
+        .gallery-sec .gallery-item img{
+            width: 100%;
+        }
+        .gallery-sec .gallery-item p{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom:-78px;
+            background:#00a5fe;
+            background:rgba(0,165,254,.8);
+            padding:5px 0;
+            white-space: normal;
+            opacity: 0;
+            filter:alpha(opacity=0);
+            -webkit-transition: all .3s;
+            transition: all .3s;
+        }
+
+        .gallery-sec .gallery-item:hover p{
+            top:auto;
+            bottom:0;
+            opacity: 1;
+            filter:alpha(opacity=100);
+            transition-delay: .4s;
+        }
+        .gallery-sec .gallery-item p a{
+            display:inline-block;
+            font-size: 14px;
+            *display:inline;
+            *zoom:1;
+            width: 85px;
+            margin:5px 18px;
+            color:#fff;
+            line-height: 24px;
+            height:24px;
+            position: relative;
+        }
+        .gallery-sec .gallery-item p a:hover{
+            color: #fff;
+            text-decoration: none;
+        }
+        .gallery-sec .gallery-item p a:hover:after{
+            content:'';
+            display:block;
+            width:100%;
+            height:4px;
+            overflow: hidden;
+            background:#fff;
+            font-size: 0;
+            line-height: 0;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .work-sec{
+            font-size: 0;
+            position: relative;
+            white-space:nowrap;
+        }
+        .work-sec .work-item{
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+            margin:15px;
+            position: relative;
+            text-align: center;
+        }
+        .work-item .work-view{
+            width: 270px;
+            height: 270px;
+        }
+        .work-item .work-view img{
+            width: 100%;
+            overflow: hidden;
+        }
+        .work-item .work-tag{
+            font-size: 16px;
+            color:#fff;
+            width: 46px;
+            height: 46px;
+            line-height: 46px;
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            display: block;
+            background:#2871b6;
+        }
+        .work-item .work-name{
+            display: block;
+            padding-top: 5px;
+            color:#fff;
+            font-size: 16px;
+        }
+        .work-item .work-name:hover{
+            color: #ffaa31;
+        }
+        .work-item .work-time{
+            font-size: 12px;
+            color: #b9b9b9;
+            display: none;
+        }
+
+        .event-sec{
+            font-size: 0;
+            position: relative;
+            white-space:nowrap;
+        }
+        .event-sec .event-item{
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+            margin:0 15px;
+            width: 382px;
+            position: relative;
+            white-space: normal;
+        }
+        .event-item .event-view{
+            width: 382px;
+            height:237px;
+        }
+        .event-item .event-view img{
+            width: 100%;
+            overflow: hidden;
+        }
+        .event-item .event-name{
+            padding-top: 5px;
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+            color:#fff;
+            font-size: 20px;
+            border-bottom:4px solid #fff;
+            line-height: 30px;
+        }
+        .event-item .event-name:hover{
+            color: #ffaa31;
+            border-bottom:4px solid #ffaa31;
+        }
+        .event-item .event-des{
+            clear:both;
+            padding-top: 10px;
+            font-size: 12px;
+            color: #b2e0eb;
+            line-height: 25px;
+            padding-bottom: 5px;
+        }
+        .event-item .event-time{
+            font-size: 12px;
+            color: #0074fc;
+            background:#fdc516;
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+            height: 20px;
+            line-height: 20px;
+            padding:0 5px;
+        }
+
+        .trans-faster{
+            transition:all .2s;
+        }
+        .trans-fast{
+            transition:all .4s;
+        }
+
+        .pop{
+            position: absolute;
+            z-index: 110;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+            filter:alpha(opacity=0);
+        }
+        .pop-close{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 50px;
+            right: 50px;
+            z-index: 100;
+        }
+        .pop-close a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+        .pop-close a .icf{
+            font-size: 50px;
+            line-height: 50px;
+            color:#ffaa31;
+        }
+        .pop-close a:hover{
+            -webkit-transform-origin:50% 50%;
+            transform-origin:50% 50%;
+            -webkit-animation:close-ani .5s;
+            animation:close-ani .5s;
+        }
+        @-webkit-keyframes close-ani{
+            0%{
+                -webkit-transform:rotate(0deg);
+                transform:rotate(0deg);
+            }
+            100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+            }
+        }
+        @keyframes close-ani {
+            0%{
+                -webkit-transform:rotate(0deg);
+                transform:rotate(0deg);
+            }
+            100%{
+                -webkit-transform:rotate(360deg);
+                transform:rotate(360deg);
+            }
+        }
+        .pop-con{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .pop-main{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .pop-bg{
+            width:1920px;
+            height:800px;
+            position: absolute;
+            top: 0;
+            left:50%;
+            margin-left: -960px;
+            z-index: 5;
+            background:#2e3444;
+        }
+        .dn{
+            display: none;
+        }
+        #video-wrap{
+            width:100%;
+            height:100%;
+            background:#000;
+        }
+        #video-wrap .tenvideo_player{
+            height: 100%;
+        }
+
+        .chara-switch{
+            height: 163px;
+            position: absolute;
+            left: 0;
+            bottom: -163px;
+            width: 100%;
+            z-index: 120;
+        }
+        .chara-switch h4{
+            height: 38px;
+            background:url(chara_sw.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/chara_sw.png*/ no-repeat 0 0;
+            width: 303px;
+            overflow: hidden;
+            text-indent: -999em;
+            margin:0 auto;
+        }
+        .chara-switch-con{
+            width: 100%;
+            text-align: center;
+            font-size: 0;
+            height: 125px;
+            background:#005dca;
+        }
+        .chara-switch-list{
+            padding-top: 25px;
+        }
+        .chara-switch-list li{
+            text-align: left;
+            width: 94px;
+            height: 81px;
+            margin:0 20px;
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+        }
+        .chara-switch-list a{
+            position: relative;
+        }
+        .chara-switch-list svg{
+            width: 94px;
+            height: 81px;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+        .chara-switch-list img{
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            left: 0;
+            transition:all .4s;
+            opacity: .8;
+            filter:alpha(opacity=80);
+            -webkit-mask-image:url(chara-switch.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/chara-switch.png*/;
+            -webkit-mask-repeat:no-repeat;
+            -webkit-mask-position:0 0;
+        }
+        .chara-switch-list li.active img, .chara-switch-list li:hover img{
+            opacity: 1;
+            filter:alpha(opacity=100)
+        }
+        .chara-switch-list li.active svg , .chara-switch-list li:hover svg{
+            /*-webkit-filter: drop-shadow(0 0 5px #000 );
+            filter: drop-shadow(0 0 5px #000 );*/
+        }
+
+
+
+        /* ch1 index */
+        .bg-ch1-0{
+            background-image:url(tmp_bg.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/tmp_bg.jpg*/;
+        }
+        .pg-ch1-index{
+            height: 610px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -270px;
+        }
+        .ch-video{
+            padding-top: 60px;
+            height: 390px;
+        }
+        .ch-video-switch{
+            position: absolute;
+            left:610px;
+            white-space:nowrap;
+        }
+        .ch-video-switch li{
+            margin:0 70px;
+            display:inline-block;
+            *display:inline;
+            *zoom:1;
+        }
+        .ch-video-switch a{
+            display: block;
+            width: 598px;
+            height: 317px;
+            position: relative;
+        }
+        .ch-video-switch a img{
+            width: 100%;
+            height: 100%;
+        }
+        .ch-video-switch a i{
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background:#000;
+            opacity: .8;
+            filter:alpha(opacity=80);
+        }
+        .ch-video-cover{
+            width: 738px;
+            height: 410px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -349px;
+        }
+        .ch-video-bg{
+            width: 810px;
+            height: 483px;
+            position: absolute;
+            top: -36px;
+            left: -36px;
+        }
+        .ch-video-cover .pos-r{
+            width: 698px;
+            height: 370px;
+            overflow: hidden;
+            border:20px solid #ffaa31;
+            -webkit-mask-image:url(imgmask.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/imgmask.png*/;
+            -webkit-mask-repeat:no-repeat;
+            -webkit-mask-position:20px 20px
+        }
+        .ch-video-cover .pos-r .cover-con{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300%;
+        }
+        .ch-video-cover .pos-r .cover-con div{
+            width: 698px;
+            height: 370px;
+            float: left;
+            position: relative;
+        }
+        .ch-video-play{
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            text-align: center;
+            z-index: 50;
+        }
+        .ch-video-play .icf{
+            font-size: 100px;
+            color: #fff;
+            line-height: 370px;
+        }
+        .ch-video-play:hover .icf{
+            color: #ffaa31;
+        }
+
+        .ch-video-cover img{
+            transition:all .5s;
+        }
+        .ch-video-cover:hover img{
+            transform-origin:50% 50%;
+            transform:scale(1.05);
+            transition:all 5s;
+        }
+        .ch-pro{
+            opacity: .8;
+            filter:alpha(opacity=80);
+        }
+        .ch-pro .ch-title{
+            text-align: center;
+            color: #ffffff;
+            font-size: 28px;
+            line-height: 63px;
+            height: 63px;
+            margin-bottom: 10px;
+        }
+        .ch-pro .ch-title i{
+            display:inline-block;
+            margin-right: 10px;
+            background:url(chapter_title.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/chapter_title.png*/ no-repeat 0 -150px;
+            width:55px;
+            height: 63px;
+            font-size: 28px;
+            vertical-align: -35%;
+        }
+        .ch-pro p{
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .ch-entrance{
+            display: block;
+            margin:0 auto;
+            color:#ffaa31;
+            text-decoration: none;
+            width: 75px;
+            font-size: 16px;
+            text-align: center;
+            border-top:2px solid #ffaa31;
+            transition:all .4s;
+        }
+        .ch-entrance:hover{
+            text-decoration: none;
+            color: #fff;
+            border-color:#fff;
+        }
+
+        .ch1-ph1-title{
+            background:url(chapter_title.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/chapter_title.png*/ no-repeat 0 0;
+            width: 133px;
+            height: 150px;
+        }
+        .chara-ch1-ph1{
+            background:url(c1_p1_chara.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/c1_p1_chara.png*/ no-repeat 0 0;
+            width:639px;
+            height:489px;
+            top:50%;
+            left:50%;
+            margin-left: 95px;
+            margin-top: -180px;
+        }
+        .chara-ch1-ph2{
+            background:url(c1_p2_chara.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/c1_p2_chara.png*/ no-repeat 0 0;
+            width:1007px;
+            height:772px;
+            top:50%;
+            left:50%;
+            margin-left: -230px;
+            margin-top: -420px;
+        }
+        .chara-ch1-ph3{
+            background:url(c1_p3_chara.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/c1_p3_chara.png*/ no-repeat 0 0;
+            width:659px;
+            height:617px;
+            top:50%;
+            left:50%;
+            margin-left: 95px;
+            margin-top: -256px;
+        }
+        .chara-ch1-ph4{
+            background:url(c1_p4_chara.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/c1_p4_chara.png*/ no-repeat 0 0;
+            width:569px;
+            height:672px;
+            left: 50%;
+            top: 50%;
+            margin-left: 125px;
+            margin-top: -368px;
+        }
+
+
+        .bg-index{
+            background:url(bg-index.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-index.jpg*/ no-repeat 50% 50%;
+        }
+        .bg-ch1-ph1{
+            background:url(bg-ch1-ph1.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-ch1-ph1.jpg*/ no-repeat 50% 50%;
+            background-size:cover;
+        }
+        .bg-ch1-ph2{
+            background:url(bg-ch1-ph2.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-ch1-ph2.jpg*/ no-repeat 50% 50%;
+            background-size:cover;
+        }
+        .bg-ch1-ph3{
+            background:url(bg-ch1-ph3.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-ch1-ph3.jpg*/ no-repeat 50% 50%;
+            background-size:cover;
+        }
+        .bg-ch1-ph4{
+            background:url(bg-ch1-ph4.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-ch1-ph4.jpg*/ no-repeat 50% 50%;
+            background-size:cover;
+        }
+
+        .bg-npc{
+            background:url(bg-npc.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-npc.jpg*/ no-repeat 50% 50%;
+            background-size:cover;
+        }
+
+
+        .npc-view-0{
+            background:url(npc_0_view.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/npc_0_view.png*/ no-repeat 0 0;
+        }
+        .npc-view-1{
+            background:url(npc_1_view.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/npc_1_view.png*/ no-repeat 0 0;
+        }
+        .npc-view-2{
+            background:url(npc_2_view.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/npc_2_view.png*/ no-repeat 0 0;
+        }
+        .npc-view-3{
+            background:url(npc_3_view.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/npc_3_view.png*/ no-repeat 0 0;
+        }
+        .npc-view-4{
+            background:url(npc_4_view.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/npc_4_view.png*/ no-repeat 0 0;
+            width: 1000px;
+            height:437px;
+            margin-left: -180px;
+        }
+        .npc-view-5{
+            background:url(npc_5_view.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/npc_5_view.png*/ no-repeat 0 0;
+        }
+        .npc-view-6{
+            background:url(npc_6_view.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/npc_6_view.png*/ no-repeat 0 0;
+        }
+        .npc-view-7{
+            background:url(npc_7_view.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/npc_7_view.png*/ no-repeat 0 0;
+        }
+        .npc-view-8{
+            background:url(npc_8_view.png)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/npc_8_view.png*/ no-repeat 0 0;
+        }
+
+
+
+        .pop-bg-npc{
+            background:url(bg-chara-detail.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-chara-detail.jpg*/ no-repeat 50% 50%;
+            background-size:cover;
+        }
+
+
+        .bg-audio{
+            background:url(bg-audio.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-audio.jpg*/ no-repeat 50% 50%;
+            background-size:cover;
+        }
+        .bg-gallery{
+            background:url(bg-gallery.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-gallery.jpg*/ no-repeat 50% 50%;
+            background-size:cover;
+        }
+        .bg-ch-gallery{
+            background:url(bg-ch-gallery.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-ch-gallery.jpg*/ no-repeat 50% 50%;
+            background-size:cover;
+        }
+        .bg-work{
+            background:url(bg-work.jpg)/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/bg-work.jpg*/ no-repeat 50% 50%;
+            background-size:cover;
+        }
+
+        .bg-event{
+            background:#0074fc;
+        }
+
+
+
+        .overview{
+            padding-left: 600px;
+        }
+        .scrollbar
+        {
+            opacity: .3;
+            filter:alpha(opacity=30);
+            margin:0 auto;
+            width: 300px;
+            height:12px;
+            clear:both;
+        }
+        .sm #gallery-pg .scrollbar{
+            margin-top: -20px;
+        }
+        .scrollbar:hover{
+            opacity: 1;
+            filter:alpha(opacity=100);
+        }
+        .scrollbar .track
+        {
+            background:#444c61;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius:5px;
+            width:100%;
+            height:10px;
+            position:relative;
+            border:1px solid #303646;
+        }
+
+        .scrollbar .thumb
+        {
+            background:#737e9c;
+            cursor:pointer;
+            overflow:hidden;
+            position:absolute;
+            left:50%;
+            height:10px;
+            width:50px;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius:5px;
+        }
+
+        .disable
+        {
+            display:none;
+        }
+
+        .loading-progress{
+            position: absolute;
+            top: 0;
+            width:100%;
+            left:0;
+            background:#171a23;
+            height: 5px;
+            overflow: hidden;
+            z-index: 100;
+        }
+        .loading-progress div{
+            height:5px;
+            width: 0;
+            background: #373f4a;
+        }
+
+        .md #stage{
+            height:700px;
+        }
+        .md .pg-ch1-index{
+            margin-top: -260px;
+        }
+        .md .ch-pro{
+            margin-top: -20px;
+        }
+        .sm #stage{
+            height:600px;
+        }
+        .sm .pg-ch1-index{
+            margin-top: -240px;
+        }
+        .sm .ch-video{
+            -webkit-transform:scale(.8);
+            transform:scale(.8);
+        }
+        .sm .ch-pro{
+            margin-top: -72px;
+        }
+        .sm #aside .ch-menu{
+            margin-top: -150px;
+        }
+        .sm .ch-ph-con h3{
+            display: none;
+        }
+        .sm .pg{
+            margin-top: -210px;
+        }
+        .sm .main-pg .pg-title{
+            margin-bottom: 25px;
+        }
+        .sm .npc-filter, .gallery-filter{
+            margin-bottom: 5px;
+        }
+        .sm .pg-main{
+            height: 390px;
+        }
+        .loading{position:absolute;top:50%;left:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);height:25px;width:10px;border-radius:10%;background:#2c3e50;border-top-color:#2980b9;-webkit-animation:fade2 1s infinite;animation:fade2 1s infinite;-webkit-transition:background .2s;transition:background .2s;z-index:100;display:none}.loading:after,.loading:before{content:'';position:absolute;display:block;height:20px;width:10px;background:#2c3e50;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);left:-15px;border-radius:10%;-webkit-animation:fade1 1s infinite;animation:fade1 1s infinite;-webkit-transition:background .2s;transition:background .2s}.loading:before{left:15px;-webkit-animation:fade3 1s infinite;animation:fade3 1s infinite}@-webkit-keyframes fade1{0%{background:#2980b9}}@keyframes fade1{0%{background:#2980b9}}@-webkit-keyframes fade2{33%{background:#2980b9}}@keyframes fade2{33%{background:#2980b9}}@-webkit-keyframes fade3{66%{background:#2980b9}}@keyframes fade3{66%{background:#2980b9}}.mCustomScrollbar{-ms-touch-action:pinch-zoom;touch-action:pinch-zoom}.mCustomScrollbar.mCS_no_scrollbar,.mCustomScrollbar.mCS_touch_action{-ms-touch-action:auto;touch-action:auto}.mCustomScrollBox{position:relative;overflow:hidden;height:100%;max-width:100%;outline:0;direction:ltr}.mCSB_container{overflow:hidden;width:auto;height:auto}.mCSB_inside>.mCSB_container{margin-right:0}.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{margin-right:0}.mCS-dir-rtl>.mCSB_inside>.mCSB_container{margin-right:0;margin-left:30px}.mCS-dir-rtl>.mCSB_inside>.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{margin-left:0}.mCSB_scrollTools{position:absolute;width:16px;height:auto;left:auto;top:0;right:0;bottom:0;opacity:.75;filter:"alpha(opacity=75)";-ms-filter:"alpha(opacity=75)"}.mCSB_outside+.mCSB_scrollTools{right:-26px}.mCS-dir-rtl>.mCSB_inside>.mCSB_scrollTools,.mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools{right:auto;left:0}.mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools{left:-26px}.mCSB_scrollTools .mCSB_draggerContainer{position:absolute;top:0;left:0;bottom:0;right:0;height:auto}.mCSB_scrollTools a+.mCSB_draggerContainer{margin:20px 0}.mCSB_scrollTools .mCSB_draggerRail{width:2px;height:100%;margin:0 auto;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px}.mCSB_scrollTools .mCSB_dragger{cursor:pointer;width:100%;height:30px;z-index:1}.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{position:relative;width:4px;height:100%;margin:0 auto;-webkit-border-radius:16px;-moz-border-radius:16px;border-radius:16px;text-align:center}.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{width:12px}.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{width:8px}.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonUp{display:block;position:absolute;height:20px;width:100%;overflow:hidden;margin:0 auto;cursor:pointer}.mCSB_scrollTools .mCSB_buttonDown{bottom:0}.mCSB_horizontal.mCSB_inside>.mCSB_container{margin-right:0;margin-bottom:30px}.mCSB_horizontal.mCSB_outside>.mCSB_container{min-height:100%}.mCSB_horizontal>.mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{margin-bottom:0}.mCSB_scrollTools.mCSB_scrollTools_horizontal{width:50%;top:auto;height:16px;bottom:0;left:25%}.mCustomScrollBox+.mCSB_scrollTools+.mCSB_scrollTools.mCSB_scrollTools_horizontal,.mCustomScrollBox+.mCSB_scrollTools.mCSB_scrollTools_horizontal{bottom:-26px}.mCSB_scrollTools.mCSB_scrollTools_horizontal a+.mCSB_draggerContainer{margin:0 20px}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%;height:2px;margin:7px 0}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger{width:30px;height:100%;left:0}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{width:100%;height:4px;margin:6px auto}.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{height:12px;margin:2px auto}.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{height:8px;margin:4px 0}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{display:block;position:absolute;width:20px;height:100%;overflow:hidden;margin:0 auto;cursor:pointer}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{left:0}.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{right:0}.mCSB_container_wrapper{position:absolute;height:auto;width:auto;overflow:hidden;top:0;left:0;right:0;bottom:0;margin-right:30px;margin-bottom:30px}.mCSB_container_wrapper>.mCSB_container{padding-right:30px;padding-bottom:30px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.mCSB_vertical_horizontal>.mCSB_scrollTools.mCSB_scrollTools_vertical{bottom:20px}.mCSB_vertical_horizontal>.mCSB_scrollTools.mCSB_scrollTools_horizontal{right:20px}.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden+.mCSB_scrollTools.mCSB_scrollTools_vertical{bottom:0}.mCS-dir-rtl>.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_scrollTools.mCSB_scrollTools_horizontal,.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden+.mCSB_scrollTools~.mCSB_scrollTools.mCSB_scrollTools_horizontal{right:0}.mCS-dir-rtl>.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_scrollTools.mCSB_scrollTools_horizontal{left:20px}.mCS-dir-rtl>.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden+.mCSB_scrollTools~.mCSB_scrollTools.mCSB_scrollTools_horizontal{left:0}.mCS-dir-rtl>.mCSB_inside>.mCSB_container_wrapper{margin-right:0;margin-left:30px}.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden>.mCSB_container{padding-right:0}.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden>.mCSB_container{padding-bottom:0}.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{margin-right:0;margin-left:0}.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{margin-bottom:0}.mCSB_scrollTools,.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_scrollTools .mCSB_buttonRight,.mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{-webkit-transition:opacity .2s ease-in-out,background-color .2s ease-in-out;-moz-transition:opacity .2s ease-in-out,background-color .2s ease-in-out;-o-transition:opacity .2s ease-in-out,background-color .2s ease-in-out;transition:opacity .2s ease-in-out,background-color .2s ease-in-out}.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar{-webkit-transition:width .2s ease-out .2s,height .2s ease-out .2s,margin-left .2s ease-out .2s,margin-right .2s ease-out .2s,margin-top .2s ease-out .2s,margin-bottom .2s ease-out .2s,opacity .2s ease-in-out,background-color .2s ease-in-out;-moz-transition:width .2s ease-out .2s,height .2s ease-out .2s,margin-left .2s ease-out .2s,margin-right .2s ease-out .2s,margin-top .2s ease-out .2s,margin-bottom .2s ease-out .2s,opacity .2s ease-in-out,background-color .2s ease-in-out;-o-transition:width .2s ease-out .2s,height .2s ease-out .2s,margin-left .2s ease-out .2s,margin-right .2s ease-out .2s,margin-top .2s ease-out .2s,margin-bottom .2s ease-out .2s,opacity .2s ease-in-out,background-color .2s ease-in-out;transition:width .2s ease-out .2s,height .2s ease-out .2s,margin-left .2s ease-out .2s,margin-right .2s ease-out .2s,margin-top .2s ease-out .2s,margin-bottom .2s ease-out .2s,opacity .2s ease-in-out,background-color .2s ease-in-out}.mCS-autoHide>.mCustomScrollBox>.mCSB_scrollTools,.mCS-autoHide>.mCustomScrollBox~.mCSB_scrollTools{opacity:0;filter:"alpha(opacity=0)";-ms-filter:"alpha(opacity=0)"}.mCS-autoHide:hover>.mCustomScrollBox>.mCSB_scrollTools,.mCS-autoHide:hover>.mCustomScrollBox~.mCSB_scrollTools,.mCustomScrollBox:hover>.mCSB_scrollTools,.mCustomScrollBox:hover~.mCSB_scrollTools,.mCustomScrollbar>.mCustomScrollBox>.mCSB_scrollTools.mCSB_scrollTools_onDrag,.mCustomScrollbar>.mCustomScrollBox~.mCSB_scrollTools.mCSB_scrollTools_onDrag{opacity:1;filter:"alpha(opacity=100)";-ms-filter:"alpha(opacity=100)"}.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,.4);filter:"alpha(opacity=40)";-ms-filter:"alpha(opacity=40)"}.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.75);filter:"alpha(opacity=75)";-ms-filter:"alpha(opacity=75)"}.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.85);filter:"alpha(opacity=85)";-ms-filter:"alpha(opacity=85)"}.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.9);filter:"alpha(opacity=90)";-ms-filter:"alpha(opacity=90)"}.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_scrollTools .mCSB_buttonRight,.mCSB_scrollTools .mCSB_buttonUp{opacity:.4;filter:"alpha(opacity=40)";-ms-filter:"alpha(opacity=40)"}.mCSB_scrollTools .mCSB_buttonUp{background-position:0 0}.mCSB_scrollTools .mCSB_buttonDown{background-position:0 -20px}.mCSB_scrollTools .mCSB_buttonLeft{background-position:0 -40px}.mCSB_scrollTools .mCSB_buttonRight{background-position:0 -56px}.mCSB_scrollTools .mCSB_buttonDown:hover,.mCSB_scrollTools .mCSB_buttonLeft:hover,.mCSB_scrollTools .mCSB_buttonRight:hover,.mCSB_scrollTools .mCSB_buttonUp:hover{opacity:.75;filter:"alpha(opacity=75)";-ms-filter:"alpha(opacity=75)"}.mCSB_scrollTools .mCSB_buttonDown:active,.mCSB_scrollTools .mCSB_buttonLeft:active,.mCSB_scrollTools .mCSB_buttonRight:active,.mCSB_scrollTools .mCSB_buttonUp:active{opacity:.9;filter:"alpha(opacity=90)";-ms-filter:"alpha(opacity=90)"}.mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.85)}.mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.9)}.mCS-light-2.mCSB_scrollTools .mCSB_buttonUp{background-position:-32px 0}.mCS-light-2.mCSB_scrollTools .mCSB_buttonDown{background-position:-32px -20px}.mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft{background-position:-40px -40px}.mCS-light-2.mCSB_scrollTools .mCSB_buttonRight{background-position:-40px -56px}.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.85)}.mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,.9)}.mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp{background-position:-16px 0}.mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown{background-position:-16px -20px}.mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft{background-position:-20px -40px}.mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight{background-position:-20px -56px}.mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail{background-color:#fff;background-color:rgba(255,255,255,.1)}.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail{background-color:#fff;background-color:rgba(255,255,255,.15)}.mCS-rounded.mCSB_scrollTools .mCSB_buttonUp{background-position:0 -72px}.mCS-rounded.mCSB_scrollTools .mCSB_buttonDown{background-position:0 -92px}.mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft{background-position:0 -112px}.mCS-rounded.mCSB_scrollTools .mCSB_buttonRight{background-position:0 -128px}.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp{background-position:-16px -72px}.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown{background-position:-16px -92px}.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft{background-position:-20px -112px}.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight{background-position:-20px -128px}.mCS-3d.mCSB_scrollTools .mCSB_buttonUp{background-position:-32px -72px}.mCS-3d.mCSB_scrollTools .mCSB_buttonDown{background-position:-32px -92px}.mCS-3d.mCSB_scrollTools .mCSB_buttonLeft{background-position:-40px -112px}.mCS-3d.mCSB_scrollTools .mCSB_buttonRight{background-position:-40px -128px}.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#555}.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerContainer{background-color:#000;background-color:rgba(0,0,0,.05);box-shadow:inset 1px 1px 16px rgba(0,0,0,.1)}.mCS-3d-thick.mCSB_scrollTools .mCSB_draggerRail{background-color:transparent}.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonUp{background-position:-32px -72px}.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonDown{background-position:-32px -92px}.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonLeft{background-position:-40px -112px}.mCS-3d-thick.mCSB_scrollTools .mCSB_buttonRight{background-position:-40px -128px}
+    </style>
+</head>
+
+<body>
+<div id="stage">
+    <div id="header">
+        <div class="pos-r">
+            <div class="header-bg"></div>
+            <h2>
+                <a href="#" class="fa">世界观故事</a>
+            </h2>
+            <div class="ch-nav">
+                <ul class="ch-item ch-open" data-ch="1">
+                    <li><a class="ch-index" href="#">ch1</a><span></span><i></i></li>
+                    <li><a href="#">ph1</a><span></span><i></i></li>
+                    <li><a href="#">ph2</a><span></span><i></i></li>
+                    <li><a href="#">ph3</a><span></span><i></i></li>
+                    <li><a href="#">ph4</a><span></span><i></i></li>
+                </ul>
+                <ul class="ch-item ch-close" data-ch="2">
+                    <li><a href="#" class="ch-index">ch2</a></li>
+                </ul>
+            </div>
+            <div class="ms-nav">
+                <div class="ms-nav-bg"></div>
+                <div class="pos-r">
+                    <h1 class="logo">
+                        <a href="javascript:if(confirm(%27http://mxd2.qq.com/  \n\nThis file was not retrieved by Teleport Ultra, because it is addressed on a domain or path outside the boundaries set for its Starting Address.  \n\nDo you want to open it from the server?%27))window.location=%27http://mxd2.qq.com/%27" tppabs="http://mxd2.qq.com/" target="_blank">冒险岛2</a>
+                    </h1>
+                    <div class="ms-audio">
+                        <a href="#"><i class="icf ico-audio-on"></i></a>
+                    </div>
+                    <ul class="ms-cat">
+                        <li class="active" data-page-cat="chapter"><a href="#"><i class="icf ico-map"></i><span>冒险篇章</span></a></li>
+                        <li data-page-cat="npc"><a href="#"><i class="icf ico-man"></i><span>冒险角色</span></a></li>
+                        <li data-page-cat="audio"><a href="#"><i class="icf ico-music"></i><span>冒险乐章</span></a></li>
+                        <li data-page-cat="gallery"><a href="#"><i class="icf ico-gallery"></i><span>壁纸图鉴</span></a></li>
+                        <li data-page-cat="event"><a href="#"><i class="icf ico-star"></i><span>冒险活动</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg"></div>
+    <div class="mask"></div>
+    <div class="page">
+        <div id="page-wrap">
+
+        </div>
+    </div>
+    <div id="aside">
+        <ul class="ch-menu">
+            <li class="active"><a href="#"><i class="icf ico-map"></i><span>冒险岛与神之战争</span></a></li>
+            <li><a href="#"><i class="icf ico-man"></i><span>起源角色</span></a></li>
+            <li><a href="#"><i class="icf ico-music"></i><span>冒险序曲</span></a></li>
+            <li><a href="#"><i class="icf ico-gallery"></i><span>视觉盛宴</span></a></li>
+            <li><a href="#"><i class="icf ico-works"></i><span>同人内容</span></a></li>
+        </ul>
+    </div>
+    <div class="chara-switch">
+        <h4>冒险角色</h4>
+        <div class="chara-switch-con">
+            <ul class="chara-switch-list">
+            </ul>
+        </div>
+    </div>
+    <div class="loading"></div>
+    <div class="loading-progress">
+        <div></div>
+    </div>
+</div>
+
+<script type="text/template" id="tpl-pg">
+    <div class="pg {{pg-class}}" id="{{pg-id}}" style="display: block;">
+        <h3 class="pg-title"> {{pg-title}} <span> {{pg-sub}} </span></h3>
+        <div class="filter"></div>
+        <div class="pg-main viewport">
+            {{pg-con}}
+        </div>
+        <div class="scrollbar">
+            <div class="track"><div class="thumb"></div></div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="tpl-audio-item">
+    <div class="audio-item trans-fast item">
+        <div class="record trans-fast"><img src="record.png"/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/record.png*/ alt=""></div>
+        <div class="cover"><img src="{{cover}}" alt=""></div>
+        <a href="#" class="play" data-audio-id="{{audio-id}}" data-audio-src="{{src}}"><i class="icf"></i></a>
+        <div class="board trans-fast">
+            <h5>{{name}}</h5>
+            <span class="time"></span>
+            <div class="track"><div class="played"></div></div>
+            <p>{{des}}</p>
+        </div>
+        <div class="border trans-faster"></div>
+        <div class="name trans-faster">{{name}}</div>
+    </div>
+</script>
+<script type="text/template" id="tpl-work-item">
+    <div class="work-item item" data-work-cat="{{cat}}" data-work-id="{{id}}">
+        <a href="{{url}}" target="_blank" class="work-view"><img src="{{thumb}}" alt=""></a>
+        <span class="work-tag">{{tag}}</span>
+        <a href="{{url}}" target="_blank" class="work-name">{{name}}</a>
+        <span class="work-time">{{date}}</span>
+    </div>
+</script>
+<script type="text/template" id="tpl-event-item">
+    <div class="event-item item" data-event-cat="{{cat}}" data-event-id="{{id}}">
+        <a href="{{url}}" target="_blank" class="event-view"><img src="{{thumb}}" alt=""></a>
+        <a href="{{url}}" target="_blank" class="event-name">{{name}}</a>
+        <p class="event-des">{{des}}</p>
+        <span class="event-time">{{date}}</span>
+    </div>
+</script>
+<script type="text/template" id="tpl-pop">
+    <div class="pop {{class}}" id="{{id}}">
+        <div class="pop-con">
+            <div class="pop-bg {{bg}}"><div class="mask"></div></div>
+            <div class="pop-close"><a href="#"><i class="icf ico-close"></i></a></div>
+            <div class="pop-main">
+                {{main}}
+            </div>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="tpl-chapter-index">
+    <div class="{{class}}">
+        <div class="ch-video">
+            <ul class="ch-video-switch">
+                <li><a href="#"><img src="cover_ch1_2.jpg"/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/cover_ch1_2.jpg*/ alt=""><i></i></a></li>
+                <li><a href="#"><img src="cover_ch1.jpg"/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/cover_ch1.jpg*/ alt=""><i></i></a></li>
+            </ul>
+            <div class="ch-video-cover">
+                <div class="ch-video-bg">
+                    <svg xmlns="http://www.w3.org/2000/svg"preserveAspectRatio="xMidYMid" width="810" height="483" viewBox="0 0 810 483">
+                        <defs>
+                            <filter id="drop-shadow-1" filterUnits="userSpaceOnUse">
+                                <feOffset in="SourceAlpha"/>
+                                <feGaussianBlur stdDeviation="5" result="dropBlur"/>
+                                <feFlood flood-color="#040000" flood-opacity="http://mxd2.qq.com/act/a20170206world/0.53"/>
+                                <feComposite operator="in" in2="dropBlur" result="dropShadowComp"/>
+                                <feComposite in="SourceGraphic" result="shadowed"/>
+                            </filter>
+                        </defs>
+                        <path d="M773,120 L773,446 L36,446 L36,36 L687,36 L773,120 Z" class="cls-1" fill="#ffaa31" filter="url(#drop-shadow-1)"/>
+                    </svg>
+                </div>
+                <div class="pos-r">
+                    <div class="cover-con">
+                        <div class="cur" style="z-index: 20;"><img src="cover_ch1_2.jpg"/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/cover_ch1_2.jpg*/ alt=""></div>
+                        <div class="nxt"><img src="cover_ch1.jpg"/*tpa=http://game.gtimg.cn/images/mxd2/act/a20170206world/cover_ch1.jpg*/ alt=""></div>
+                    </div>
+                    <a href="#" class="ch-video-play"><i class="icf ico-play"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="ch-pro">
+            <h3 class="ch-title">
+                <i></i>{{title}}
+            </h3>
+            {{des}}
+            <a href="#" class="ch-entrance">MORE +</a>
+        </div>
+    </div>
+</script>
+<script type="text/template" id="tpl-chapter">
+    <div class="pg-ch {{ph-class}}">
+        <div class="ch-ph-con">
+            <h3>{{ph-heading}}</h3>
+            <h4>{{ph-title}}</h4>
+            <div class="ph-con">{{ph-des}}</div>
+            <a href="#" data-ph="{{ph-prev}}" class="ph-ctrl ph-ctrl-prev"><i class="icf ico-prev"></i></a>
+            <a href="#" data-ph="{{ph-next}}" class="ph-ctrl ph-ctrl-next"><i class="icf ico-next"></i></a>
+        </div>
+        <div class="ch-ph-bg {{ph-chara}}"></div>
+    </div>
+</script>
+<script src="jquery-1.9.1.min.js" tppabs="http://ossweb-img.qq.com/images/js/jquery/jquery-1.9.1.min.js"></script>
+<script src="mxd2.js" tppabs="http://mxd2.qq.com/mxd2.js"></script>
+<script src="foot.js" tppabs="http://ossweb-img.qq.com/images/js/foot.js"></script>
+<script src="TweenMax.min.js" tppabs="http://mxd2.qq.com/act/a20170206world/js/TweenMax.min.js"></script>
+<script src="jquery.mCustomScrollbar.min.js" tppabs="http://mxd2.qq.com/act/a20170206world/js/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="qplayer.js" tppabs="http://imgcache.qq.com/music/js/module/qplayer.js" charset="utf-8"></script>
+<script src="jquery.tinyscrollbar.js" tppabs="http://mxd2.qq.com/act/a20170206world/js/jquery.tinyscrollbar.js"></script>
+<script src="main.js" tppabs="http://mxd2.qq.com/act/a20170206world/main.js"></script>
+<script>
+  mxd2Init();
+</script>
+</body>
+
+</html><!--[if !IE]>|xGv00|be1a60ef2e32edfb9dca4a6c4ddeb643<![endif]-->

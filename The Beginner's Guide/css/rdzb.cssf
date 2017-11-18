@@ -1,0 +1,421 @@
+/*-----------------top-banner顶部广告栏star-----------------------*/
+#top-banner .container{
+    height: 42px;
+    background-color: #fff;
+    position: relative;
+}
+#top-banner .logo{
+    margin-left: 311px;
+    float: left;
+}
+#top-banner .mlkz {
+    float: left;
+    cursor: pointer;
+}
+/*盟里开战*/
+#top-banner .mlkz .mlkz-h{
+    position: absolute;
+    top: 42px;
+    left: 150px;
+    z-index: 3;
+    display: none;
+}
+#top-banner .czpt {
+    line-height: 42px;
+    width: 120px;
+    float: left;
+}
+#top-banner .txpt{
+    line-height: 42px;
+    cursor: pointer;
+}
+#top-banner .czpt span {
+    padding-left: 2px;
+}
+/*-----------------top-banner顶部广告栏end-----------------------*/
+
+
+/*-----------------top-nav顶部广告栏star-----------------------*/
+#top-nav .container{
+    height: 48px;
+    background: url("../images/top-header-bg.png") repeat-x 0 0;
+    height: 47px;
+    position: relative;
+}
+/*左边*/
+#top-nav .left>a {
+    float: left;
+    margin-left: 58px;
+    width: 144px;
+    margin-top: 8px;
+}
+#top-nav .left ul {
+    width: 1049px;
+}
+#top-nav .left ul li{
+    float: left;
+}
+#top-nav .left ul li.line{
+    width: 2px;
+    height: 28px;
+    margin-top: 10px;
+    background: url("../images") no-repeat 0 -92px;
+}
+#top-nav .left ul li a{
+    line-height: 47px;
+    padding: 0 10px;
+}
+/*右边*/
+#top-nav .right .ewm{
+    width: 140px;
+    cursor: pointer;
+    position: absolute;
+    height: 80px;
+    top: 0;
+    right: 400px;
+    z-index: 1;
+}
+#top-nav .right .ewm .bg{
+    width: 64px;
+    height: 66px;
+    background-color: rgba(0,0,0,0.4);
+    float: left;
+}
+#top-nav .right .ewm .bg img {
+    /*text-align: center;*/
+    margin: 10px 6px 0px 6px;
+}
+#top-nav .right p {
+    width: 59px;
+    margin-top: 10px;
+    color: #fff;
+    float: left;
+    padding-left: 10px;
+}
+/*隐藏的二维码*/
+#top-nav .ewm-hide{
+    position: absolute;
+    width: 350px;
+    height: 140px;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    right: 389px;
+    display: none;
+    z-index: 2;
+}
+#top-nav .ewm-hide img{
+    width: 110px;
+    height: 110px;
+    margin-top: 10px;
+}
+#top-nav .ewm-hide p{
+    color: #fff;
+}
+#top-nav .ewm-hide .l{
+    margin-left: 10px;
+}
+#top-nav .ewm-hide .l p{
+    margin-left: 5px;
+}
+#top-nav .ewm-hide .r p{
+    margin-left: 24px;
+}
+#top-nav .ewm-hide .r{
+    margin-left: 20px;
+}
+/*登录验证*/
+#top-nav .login-bar {
+    float: right;
+    margin-right: 48px;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+}
+#top-nav .login-bar .login{
+    width: 87px;
+    height: 32px;
+    background: url("../images/top-header-bg.png") no-repeat 0 -144px;
+    float: left;
+    margin-top: 9px;
+    cursor: pointer;
+}
+#top-nav .login-bar .yz{
+    float: left;
+    width: 107px;
+    height: 32px;
+    background: url("../images/top-header-bg.png") no-repeat 0 -208px;
+    margin-top: 9px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+/*-----------------top-nav顶部广告栏end-----------------------*/
+
+
+/*-----------------rdzb入岛准备start-----------------------*/
+#main .container{
+    height: 651px;
+    background: url("../images/bg-1.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+/*左上角盒子*/
+#main .container .left-box{
+    position: absolute;
+    left: 0px; /*-180*/
+    top: -400px;  /*-130*/
+    width: 390px;
+}
+#main .container .left-box img {
+    width: 100%;
+    display: block;
+}
+/*右下角盒子*/
+#main .container .right-box{
+    position: absolute;
+    right: -750px;
+    bottom: 0px;
+    width: 795.9px;
+}
+#main .container .right-box img{
+    width: 100%;
+    display: block;
+}
+/*键盘提示操作*/
+#main .container .skip{
+    display: block;
+    width: 203px;
+    height: 78px;
+    position: absolute;
+    bottom: 30px;
+    right: -600px;
+    z-index: 1;
+}
+#main .container .skip a img{
+    width: 100%;
+    display: block;
+}
+/*侧边导航栏*/
+#main .snav{
+    position: absolute;
+    top: 239px;
+    left: 30px;
+}
+#main .snav ul li.yd{
+    height: 41px;
+    background: url("../images/nav_icon1.png") no-repeat left center;
+    padding-left: 30px;
+
+}
+.li-bgColor{
+    padding-left: 30px;
+    height: 41px;
+    background: url("../images/nav_icon2.png") no-repeat left center;
+}
+#main .snav ul li a{
+    color: #fff;
+    font:500 14px/41px "microsoft yahei";
+}
+/*中心动画区域*/
+#main .container .center{
+    width: 960px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+/*入岛准备*/
+#main .center .xszn {
+    display: block;
+    position: absolute;
+    left: 4px;
+    top: 54px;
+    width: 300px;
+}
+#main .center .xszn img{
+    width: 100%;
+    display: block;
+}
+/*配置要求*/
+#main .center .mxdl{
+    display: block;
+    position: absolute;
+    left: 79px;
+    top: 141px;
+    width: 566.8px;
+}
+#main .center .mxdl img {
+    width: 100%;
+    display: block;
+}
+/*视频*/
+#main .center .video{
+    display: block;
+    position: absolute;
+    left: -300px;  /*10px*/
+    top: 255px;
+    width: 466px;
+    /*opacity: 0.1;*/
+}
+#main .center .video img {
+    width: 100%;
+    display: block;
+}
+/*气泡*/
+#main .center .qp{
+    display: block;
+    position: absolute;
+    left: 330px;  /*391*/
+    top: 15px;  /*15*/
+    /*transform-origin: center center;*/
+    width: 10px;
+    height: 10px;
+    /*opacity: 0.1;*/
+}
+#main .center .qp img {
+    width: 100%;
+    display: block;
+}
+#main .center .qp .p1-txt{
+    display: block;
+    position: absolute;
+    left: 28px;
+    top: 30px;
+    width: 125px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+#main .center .qp .p2-txt{
+    display: block;
+    position: absolute;
+    left: 28px;
+    top: 84px;
+    width: 125px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #ffffff;
+    font-weight: bold;
+}
+/*美女*/
+#main .center .girl{
+    display: block;
+    position: absolute;
+    left: 682px;
+    top: 24px;
+    width: 265.9px;
+}
+#main .center .girl img{
+    width: 100%;
+    display: block;
+}
+/*斜杠*/
+#main .center .xg{
+    display: block;
+    position: absolute;
+    left: 1600px;
+    top: 256px;
+    width: 370.3px;
+    opacity: 0.1;
+}
+#main .center .xg img {
+    width: 100%;
+    display: block;
+}
+/*左边娃娃*/
+#main .center .left-wawa{
+    display: block;
+    position: absolute;
+    left: 1200px;  /*510*/
+    top: 318px;
+    width: 92px;
+    /*opacity:0.1;*/
+}
+#main .center .left-wawa img{
+    width: 100%;
+    display: block;
+}
+/*右边娃娃*/
+#main .center .right-wawa{
+    display: block;
+    position: absolute;
+    left: 900px;  /*893*/
+    top: 500px;
+    transform-origin: left bottom;
+    width: 140px;
+    opacity:0.1;
+}
+#main .center .right-wawa img {
+    width: 100%;
+    display: block;
+}
+/*小方块上*/
+
+
+/*飞碟*/
+#main .center .fd{
+    display: block;
+    position: absolute;
+    left: 929px;
+    top: 202px;
+    width: 245px;
+}
+#main .center .fd img{
+    width: 100%;
+    display: block;
+}
+/*小方块下*/
+#main .center .bottom-box{
+    display: block;
+    position: absolute;
+    left: 1600px;
+    top: 526px;
+    width: 88.2px;
+}
+#main .center .bottom-box img {
+    width: 100%;
+    display: block;
+}
+/*查看下一页*/
+#main .center .look{
+    width: 98px;
+    position: absolute;
+    left: 50%;
+    margin-left: -49px;
+    bottom: 30px;
+    z-index: 2;
+}
+/*-----------------rdzb入岛准备end-----------------------*/
+
+
+
+/*-----------------footer顶部广告栏star-----------------------*/
+#footer .container {
+    height: 110px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+#footer .wrap {
+    padding-top: 34px;
+}
+#footer .wrap .link {
+    height: 30px;
+}
+#footer .wrap .link span{
+    padding: 0 10px;
+}
+#footer .wrap p.txt1 {
+    height: 26px;
+}
+
+/*-----------------footer顶部广告栏end-----------------------*/
+
+
+
+/*-----------------top-banner顶部广告栏star-----------------------*/
+/*-----------------top-banner顶部广告栏end-----------------------*/
+
+
+
+/*-----------------top-banner顶部广告栏star-----------------------*/
+/*-----------------top-banner顶部广告栏end-----------------------*/

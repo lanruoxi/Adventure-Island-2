@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>磨练成长 </title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index1.css">
+	
+    <script src="jquery-1.12.4.min.js"></script>
+	<script src="common.js"></script>
+	<script>
+	    // <!-- 左侧导航栏 js=============================== -->
+    
+        $(function () {
+            // 设置滚动事件 页面滚动到一定位置 左侧导航栏固定定位         
+            window.onscroll = function () {
+                //每次滚动的时候先去获取当前页面的卷曲距离
+                var scrl = scroll();
+                if (scrl.top > 70) {
+                    $("#sidebar").addClass("fixed")
+                    console.log(2);             
+                } else {
+                    $("#sidebar").removeClass("fixed")
+                    
+                }
+
+
+
+                function scroll() {
+                    return {
+                        top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0,
+                        left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0
+                    };
+                }
+            }
+        })
+
+        //右侧的导航栏点击切换效果
+        $(function () {
+            
+            $("#sidebar .bt").click(function () {
+                // $(this).addClass("moren dianji").next().slideDown(1000)
+                // $(this).parent(".ssdh").siblings().toggleClass("moren").children("ul").slideUp(1000)
+                $(this).addClass("dianji").next("ul").slideDown(1000);
+                $(this).parent(".ssdh").siblings().removeClass("dianji").children("ul").slideUp(1000)
+            })
+
+        })
+        //磨练成长切换效果
+        $(function () {
+            $("#sidebar .mlcz .bt").click(function(){
+                console.log(1)
+                
+                $(this).next().children().eq(0).addClass("show").css({ color: "#FFD200 " }).siblings().css({ color: "#abb1d6" });
+                $("#main-tow").children(".page").eq(0).fadeIn(1000);
+                $("#main-three").children(".page").hide();
+            })
+            var bgPic = ["bg-10.jpg", "bg-11.jpg", "bg-12.jpg", "bg-13.jpg", "bg-14.jpg"]
+            $("#sidebar .mlcz>ul>li").click(function () {
+                $(this).css({ color: "#FFD200 " }).siblings().css({ color: "#abb1d6" })
+
+                var index = $(this).index()
+                console.log(index)
+                $("#main-tow").children(".page").eq(index).fadeIn(1000).siblings().hide()
+                $("#bg-pic").css({
+                    background: "url(images/" + bgPic[index] + ") no-repeat"
+                }).fadeIn(800);
+                $("#main-three").children(".page").hide();
+            })
+        })
+
+
+        //探索进阶切换效果
+        $(function () {
+            var $lis = $("#sidebar .tsjj>ul>li")
+            console.log($lis)
+            $("#sidebar .tsjj .bt").click(function(){
+                console.log(1)
+                
+                $(this).next().children().eq(0).addClass("show").css({ color: "#FFD200 " }).siblings().css({ color: "#abb1d6" });
+                $("#main-three").children(".page").eq(0).fadeIn(1000);
+                $("#main-tow").children(".page").hide();
+            })
+            var bgPic = ["bg-15.jpg", "bg-16.jpg", "bg-17.jpg", "bg-18.jpg", "bg-19.jpg"]
+            $("#sidebar .tsjj>ul>li").click(function () {
+
+                $(this).css({ color: "#FFD200 " }).siblings().css({ color: "#abb1d6" })
+
+                var index = $(this).index()
+                console.log(index)
+                $("#main-three").children(".page").eq(index).fadeIn(1000).siblings().hide()
+                $("#bg-pic").css({
+                    background: "url(images/" + bgPic[index] + ") no-repeat"
+                }).fadeIn(800);
+                $("#main-tow").children(".page").hide();
+
+            })
+        })
+    
+	</script>
+</head>
+
+<body>
+    <!-- 头部 公共的0000000000000000 -->
+	
+	
+	<div id="top-banner">
+    <div class="container">
+        <!--logo-->
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo.png" alt=""/>
+            </a>
+        </div>
+        <!--盟力开战-->
+        <div class="mlkz">
+            <img src="images/mlkz.jpg" alt="" class="ml"/>
+            <!--隐藏的盟力开战-->
+            <div class="mlkz-h">
+                <img src="images/toptan.jpg" alt=""/>
+            </div>
+        </div>
+
+        <!--成长平台-->
+        <div class="czpt">
+            <a href="#">
+                <img src="images/logo-yuan.png" alt=""/>
+                <span>成长守护平台</span>
+            </a>
+        </div>
+        <!--腾讯游戏平台-->
+        <div class="txpt">
+            <a href="#">
+                腾讯游戏平台<i></i>
+            </a>
+
+        </div>
+    </div>
+</div>
+<!--------------top-banner顶部广告栏end------------>
+
+
+<!--------------top-nav顶部广告栏star------------>
+<div id="top-nav">
+    <div class="container">
+        <!--左边-->
+        <div class="left fl">
+            <a href="#">
+                <img src="images/gheader-top-logo.png" alt=""/>
+            </a>
+            <ul>
+                <li class="line"></li>
+                <li><a href="#">官网首页</a></li>
+                <li class="line"></li>
+                <li><a href="#">新闻资讯</a></li>
+                <li class="line"></li>
+                <li><a href="#">在线客服</a></li>
+                <li class="line"></li>
+                <li><a href="#">客户端下载</a></li>
+                <li class="line"></li>
+                <li><a href="#">官方论坛</a></li>
+            </ul>
+
+        </div>
+        <!--右边-->
+        <div class="right fl">
+            <!--二维码-->
+            <div class="ewm">
+                <div class="bg">
+                    <img src="images/s-qc-img.jpg" alt=""/>
+                </div>
+                <p>关注更多资讯APP</p>
+            </div>
+        </div>
+        <!--二维码隐藏-->
+        <div class="ewm-hide">
+            <div class="l fl">
+                <img src="images/qc-wx.jpg" alt=""/>
+
+                <p>冒险岛2微信公众号</p>
+            </div>
+            <div class="r fl">
+                <img src="images/qc-wx.jpg" alt=""/>
+
+                <p>冒险岛2社区</p>
+            </div>
+        </div>
+        <!--登录验证-->
+        <div class="login-bar">
+            <div class="login">登录</div>
+            <div class="yz">验证资格</div>
+        </div>
+
+    </div>
+
+</div>
+<!--------------top-nav顶部广告栏end------------>
+	
+	
+	
+	
+	<!--组图部分-->
+	
+	<div id="main-box" class="clearfix"> 
+	
+    <!-- 左侧黑边 -->
+    <div id="sider11" class="fl "></div>
+    <!-- 左侧 悬浮导航栏 -->
+    <div id="sidebar" >
+        <!-- 悬浮导航栏 -->
+        <div class="sid-bar">
+            <!-- 入岛主准备 -->
+            <div class="ssdh">
+                <div class="bt"><span></span>入岛准备<a id="toindex" href="index.html"></a></div>
+            </div>
+            <!-- 磨练成长 -->
+            <div class="ssdh mlcz">
+                <div class="bt dianji">
+                    <span></span>磨练成长
+                </div>
+                <ul class="show">
+
+                    <li class="show">
+                        <span class="notes"></span>属性技能
+                    </li>
+                    <li>
+                        <span class="notes"></span>剧情任务
+                    </li>
+                    <li>
+                        <span class="notes"></span>组队合作
+                    </li>
+                    <li>
+                        <span class="notes"></span>副本挑战
+                    </li>
+                    <li>
+                        <span class="notes"></span>获取装备
+                    </li>
+                </ul>
+
+
+            </div>
+            <!-- 探索进阶 -->
+            <div class="ssdh tsjj clearfix">
+                <div class="bt"><span></span>探索进阶</div>
+                <ul>
+                    <li class="show">
+                        <span class="notes"></span>地图探索
+                    </li>
+                    <li>
+                        <span class="notes"></span>成就系统
+                    </li>
+                    <li>
+                        <span class="notes"></span>生活技术
+                    </li>
+                    <li>
+                        <span class="notes"></span>钓鱼系统
+                    </li>
+                    <li>
+                        <span class="notes"></span>冒险游戏
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 背景图 -->
+    <div id="bg-pic" class="clearfix"></div>
+    <!-- 主体切换 -->
+    <div id="main" class="fr clearfix">
+
+        <!-- 切换磨练成长 -->
+        <div id="main-tow">
+
+            <!--页面1  属性技能 -->
+            <div class="page page1">
+                <h3>属性技能</h3>
+                <div>
+                    <h4>能力值和技能</h4>
+                    <p>能力值界面从屏幕右下角“角色-角色”打开技能界面从屏幕右下角“角色-技能”打开</p>
+                    <img src="images/p1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>属性点</h4>
+                    <p>属性点可以强化角色的力量、敏捷、智力、幸运、生命、暴击命中。<br> 属性点可以通过主线任务、成就、地图探险获得，能随时免费重置已添加的属性点。
+                    </p>
+                    <p>力量：骑士、狂战士的主要能力值。影响物理攻击力和物理抵抗力。<br> 敏捷：弓箭手、重炮手的主要能力值。影响物理攻击力、物理抵抗力和命中。
+                        <br> 智力：魔法师、牧师的主要能力值。影响魔法攻击力和魔法抵抗力。
+                        <br> 幸运：侠盗、刺客的主要能力值。影响物理攻击力和暴击命中。
+                        <br> 生命：生命上限，当生命值为0时，角色将被墓碑压住，无法行动。
+                        <br> 暴击命中：提高暴击的几率，暴击命中时的攻击将会给目标造成额外的伤害。
+                    </p>
+                    <img src="images/p2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>技能点</h4>
+                    <p>技能点用于强化技能等级，高等级的技能拥有更好的效果。<br> 技能点可以通过，提升等级、主线任务、成就获得，能随时免费重置已经添加的技能点。
+                        <br> 部分技能学习需要达到相应角色等级或添加前置技能等级。
+                    </p>
+                    <img src="images/p3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 页面2  剧情任务 -->
+            <div class="page">
+                <h3>剧情任务</h3>
+                <div>
+                    <h4>任务信息</h4>
+                    <p>能力值界面从屏幕右下角“角色-角色”打开技能界面从屏幕右下角“角色-技能”打开</p>
+                    <img src="images/p1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>任务分类</h4>
+                    <p>属性点可以强化角色的力量、敏捷、智力、幸运、生命、暴击命中。<br> 属性点可以通过主线任务、成就、地图探险获得，能随时免费重置已添加的属性点。
+                    </p>
+                    <p>力量：骑士、狂战士的主要能力值。影响物理攻击力和物理抵抗力。<br> 敏捷：弓箭手、重炮手的主要能力值。影响物理攻击力、物理抵抗力和命中。
+                        <br> 智力：魔法师、牧师的主要能力值。影响魔法攻击力和魔法抵抗力。
+                        <br> 幸运：侠盗、刺客的主要能力值。影响物理攻击力和暴击命中。
+                        <br> 生命：生命上限，当生命值为0时，角色将被墓碑压住，无法行动。
+                        <br> 暴击命中：提高暴击的几率，暴击命中时的攻击将会给目标造成额外的伤害。
+                    </p>
+                    <img src="images/p2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>便捷提示</h4>
+                    <p>技能点用于强化技能等级，高等级的技能拥有更好的效果。<br> 技能点可以通过，提升等级、主线任务、成就获得，能随时免费重置已经添加的技能点。
+                        <br> 部分技能学习需要达到相应角色等级或添加前置技能等级。
+                    </p>
+                    <img src="images/p3.jpg" alt="">
+                </div>
+            </div>
+            <!--  页面3 组队合作 -->
+            <div class="page">
+                <h3>组队合作</h3>
+                <div>
+                    <h4>任务信息</h4>
+                    <p>能力值界面从屏幕右下角“角色-角色”打开技能界面从屏幕右下角“角色-技能”打开</p>
+                    <img src="images/p1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>任务分类</h4>
+                    <p>属性点可以强化角色的力量、敏捷、智力、幸运、生命、暴击命中。<br> 属性点可以通过主线任务、成就、地图探险获得，能随时免费重置已添加的属性点。
+                    </p>
+                    <p>力量：骑士、狂战士的主要能力值。影响物理攻击力和物理抵抗力。<br> 敏捷：弓箭手、重炮手的主要能力值。影响物理攻击力、物理抵抗力和命中。
+                        <br> 智力：魔法师、牧师的主要能力值。影响魔法攻击力和魔法抵抗力。
+                        <br> 幸运：侠盗、刺客的主要能力值。影响物理攻击力和暴击命中。
+                        <br> 生命：生命上限，当生命值为0时，角色将被墓碑压住，无法行动。
+                        <br> 暴击命中：提高暴击的几率，暴击命中时的攻击将会给目标造成额外的伤害。
+                    </p>
+                    <img src="images/p2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>便捷提示</h4>
+                    <p>技能点用于强化技能等级，高等级的技能拥有更好的效果。<br> 技能点可以通过，提升等级、主线任务、成就获得，能随时免费重置已经添加的技能点。
+                        <br> 部分技能学习需要达到相应角色等级或添加前置技能等级。
+                    </p>
+                    <img src="images/p3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 页面3  副本挑战 -->
+            <div class="page">
+                <h3>副本挑战</h3>
+                <div>
+                    <h4>任务信息</h4>
+                    <p>能力值界面从屏幕右下角“角色-角色”打开技能界面从屏幕右下角“角色-技能”打开</p>
+                    <img src="images/p1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>任务分类</h4>
+                    <p>属性点可以强化角色的力量、敏捷、智力、幸运、生命、暴击命中。<br> 属性点可以通过主线任务、成就、地图探险获得，能随时免费重置已添加的属性点。
+                    </p>
+                    <p>力量：骑士、狂战士的主要能力值。影响物理攻击力和物理抵抗力。<br> 敏捷：弓箭手、重炮手的主要能力值。影响物理攻击力、物理抵抗力和命中。
+                        <br> 智力：魔法师、牧师的主要能力值。影响魔法攻击力和魔法抵抗力。
+                        <br> 幸运：侠盗、刺客的主要能力值。影响物理攻击力和暴击命中。
+                        <br> 生命：生命上限，当生命值为0时，角色将被墓碑压住，无法行动。
+                        <br> 暴击命中：提高暴击的几率，暴击命中时的攻击将会给目标造成额外的伤害。
+                    </p>
+                    <img src="images/p2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>便捷提示</h4>
+                    <p>技能点用于强化技能等级，高等级的技能拥有更好的效果。<br> 技能点可以通过，提升等级、主线任务、成就获得，能随时免费重置已经添加的技能点。
+                        <br> 部分技能学习需要达到相应角色等级或添加前置技能等级。
+                    </p>
+                    <img src="images/p3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 页面4   获取装备 -->
+            <div class="page">
+                <h3>获取装备</h3>
+                <div>
+                    <h4>任务信息</h4>
+                    <p>能力值界面从屏幕右下角“角色-角色”打开技能界面从屏幕右下角“角色-技能”打开</p>
+                    <img src="images/p1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>任务分类</h4>
+                    <p>属性点可以强化角色的力量、敏捷、智力、幸运、生命、暴击命中。<br> 属性点可以通过主线任务、成就、地图探险获得，能随时免费重置已添加的属性点。
+                    </p>
+                    <p>力量：骑士、狂战士的主要能力值。影响物理攻击力和物理抵抗力。<br> 敏捷：弓箭手、重炮手的主要能力值。影响物理攻击力、物理抵抗力和命中。
+                        <br> 智力：魔法师、牧师的主要能力值。影响魔法攻击力和魔法抵抗力。
+                        <br> 幸运：侠盗、刺客的主要能力值。影响物理攻击力和暴击命中。
+                        <br> 生命：生命上限，当生命值为0时，角色将被墓碑压住，无法行动。
+                        <br> 暴击命中：提高暴击的几率，暴击命中时的攻击将会给目标造成额外的伤害。
+                    </p>
+                    <img src="images/p2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>便捷提示</h4>
+                    <p>技能点用于强化技能等级，高等级的技能拥有更好的效果。<br> 技能点可以通过，提升等级、主线任务、成就获得，能随时免费重置已经添加的技能点。
+                        <br> 部分技能学习需要达到相应角色等级或添加前置技能等级。
+                    </p>
+                    <img src="images/p3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 切换   探索进阶 -->
+        <div id="main-three">
+
+            <!--页面1  地图探险 -->
+            <div class="page page1">
+                <h3>地图探险</h3>
+                <div>
+                    <h4>能力值和技能</h4>
+                    <p>能力值界面从屏幕右下角“角色-角色”打开技能界面从屏幕右下角“角色-技能”打开</p>
+                    <img src="images/p1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>属性点</h4>
+                    <p>属性点可以强化角色的力量、敏捷、智力、幸运、生命、暴击命中。<br> 属性点可以通过主线任务、成就、地图探险获得，能随时免费重置已添加的属性点。
+                    </p>
+                    <p>力量：骑士、狂战士的主要能力值。影响物理攻击力和物理抵抗力。<br> 敏捷：弓箭手、重炮手的主要能力值。影响物理攻击力、物理抵抗力和命中。
+                        <br> 智力：魔法师、牧师的主要能力值。影响魔法攻击力和魔法抵抗力。
+                        <br> 幸运：侠盗、刺客的主要能力值。影响物理攻击力和暴击命中。
+                        <br> 生命：生命上限，当生命值为0时，角色将被墓碑压住，无法行动。
+                        <br> 暴击命中：提高暴击的几率，暴击命中时的攻击将会给目标造成额外的伤害。
+                    </p>
+                    <img src="images/p2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>技能点</h4>
+                    <p>技能点用于强化技能等级，高等级的技能拥有更好的效果。<br> 技能点可以通过，提升等级、主线任务、成就获得，能随时免费重置已经添加的技能点。
+                        <br> 部分技能学习需要达到相应角色等级或添加前置技能等级。
+                    </p>
+                    <img src="images/p3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 页面2  成就系统 -->
+            <div class="page">
+                <h3>成就系统</h3>
+                <div>
+                    <h4>任务信息</h4>
+                    <p>能力值界面从屏幕右下角“角色-角色”打开技能界面从屏幕右下角“角色-技能”打开</p>
+                    <img src="images/p1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>任务分类</h4>
+                    <p>属性点可以强化角色的力量、敏捷、智力、幸运、生命、暴击命中。<br> 属性点可以通过主线任务、成就、地图探险获得，能随时免费重置已添加的属性点。
+                    </p>
+                    <p>力量：骑士、狂战士的主要能力值。影响物理攻击力和物理抵抗力。<br> 敏捷：弓箭手、重炮手的主要能力值。影响物理攻击力、物理抵抗力和命中。
+                        <br> 智力：魔法师、牧师的主要能力值。影响魔法攻击力和魔法抵抗力。
+                        <br> 幸运：侠盗、刺客的主要能力值。影响物理攻击力和暴击命中。
+                        <br> 生命：生命上限，当生命值为0时，角色将被墓碑压住，无法行动。
+                        <br> 暴击命中：提高暴击的几率，暴击命中时的攻击将会给目标造成额外的伤害。
+                    </p>
+                    <img src="images/p2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>便捷提示</h4>
+                    <p>技能点用于强化技能等级，高等级的技能拥有更好的效果。<br> 技能点可以通过，提升等级、主线任务、成就获得，能随时免费重置已经添加的技能点。
+                        <br> 部分技能学习需要达到相应角色等级或添加前置技能等级。
+                    </p>
+                    <img src="images/p3.jpg" alt="">
+                </div>
+            </div>
+            <!--  页面3 生活技术 -->
+            <div class="page">
+                <h3>生活技术</h3>
+                <div>
+                    <h4>任务信息</h4>
+                    <p>能力值界面从屏幕右下角“角色-角色”打开技能界面从屏幕右下角“角色-技能”打开</p>
+                    <img src="images/p1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>任务分类</h4>
+                    <p>属性点可以强化角色的力量、敏捷、智力、幸运、生命、暴击命中。<br> 属性点可以通过主线任务、成就、地图探险获得，能随时免费重置已添加的属性点。
+                    </p>
+                    <p>力量：骑士、狂战士的主要能力值。影响物理攻击力和物理抵抗力。<br> 敏捷：弓箭手、重炮手的主要能力值。影响物理攻击力、物理抵抗力和命中。
+                        <br> 智力：魔法师、牧师的主要能力值。影响魔法攻击力和魔法抵抗力。
+                        <br> 幸运：侠盗、刺客的主要能力值。影响物理攻击力和暴击命中。
+                        <br> 生命：生命上限，当生命值为0时，角色将被墓碑压住，无法行动。
+                        <br> 暴击命中：提高暴击的几率，暴击命中时的攻击将会给目标造成额外的伤害。
+                    </p>
+                    <img src="images/p2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>便捷提示</h4>
+                    <p>技能点用于强化技能等级，高等级的技能拥有更好的效果。<br> 技能点可以通过，提升等级、主线任务、成就获得，能随时免费重置已经添加的技能点。
+                        <br> 部分技能学习需要达到相应角色等级或添加前置技能等级。
+                    </p>
+                    <img src="images/p3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 页面4  钓鱼系统 -->
+            <div class="page">
+                <h3>钓鱼系统</h3>
+                <div>
+                    <h4>任务信息</h4>
+                    <p>能力值界面从屏幕右下角“角色-角色”打开技能界面从屏幕右下角“角色-技能”打开</p>
+                    <img src="images/p1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>任务分类</h4>
+                    <p>属性点可以强化角色的力量、敏捷、智力、幸运、生命、暴击命中。<br> 属性点可以通过主线任务、成就、地图探险获得，能随时免费重置已添加的属性点。
+                    </p>
+                    <p>力量：骑士、狂战士的主要能力值。影响物理攻击力和物理抵抗力。<br> 敏捷：弓箭手、重炮手的主要能力值。影响物理攻击力、物理抵抗力和命中。
+                        <br> 智力：魔法师、牧师的主要能力值。影响魔法攻击力和魔法抵抗力。
+                        <br> 幸运：侠盗、刺客的主要能力值。影响物理攻击力和暴击命中。
+                        <br> 生命：生命上限，当生命值为0时，角色将被墓碑压住，无法行动。
+                        <br> 暴击命中：提高暴击的几率，暴击命中时的攻击将会给目标造成额外的伤害。
+                    </p>
+                    <img src="images/p2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>便捷提示</h4>
+                    <p>技能点用于强化技能等级，高等级的技能拥有更好的效果。<br> 技能点可以通过，提升等级、主线任务、成就获得，能随时免费重置已经添加的技能点。
+                        <br> 部分技能学习需要达到相应角色等级或添加前置技能等级。
+                    </p>
+                    <img src="images/p3.jpg" alt="">
+                </div>
+            </div>
+            <!-- 页面5   冒险游戏 -->
+            <div class="page">
+                <h3>冒险游戏</h3>
+                <div>
+                    <h4>任务信息</h4>
+                    <p>能力值界面从屏幕右下角“角色-角色”打开技能界面从屏幕右下角“角色-技能”打开</p>
+                    <img src="images/p1.jpg" alt="">
+                </div>
+                <div>
+                    <h4>任务分类</h4>
+                    <p>属性点可以强化角色的力量、敏捷、智力、幸运、生命、暴击命中。<br> 属性点可以通过主线任务、成就、地图探险获得，能随时免费重置已添加的属性点。
+                    </p>
+                    <p>力量：骑士、狂战士的主要能力值。影响物理攻击力和物理抵抗力。<br> 敏捷：弓箭手、重炮手的主要能力值。影响物理攻击力、物理抵抗力和命中。
+                        <br> 智力：魔法师、牧师的主要能力值。影响魔法攻击力和魔法抵抗力。
+                        <br> 幸运：侠盗、刺客的主要能力值。影响物理攻击力和暴击命中。
+                        <br> 生命：生命上限，当生命值为0时，角色将被墓碑压住，无法行动。
+                        <br> 暴击命中：提高暴击的几率，暴击命中时的攻击将会给目标造成额外的伤害。
+                    </p>
+                    <img src="images/p2.jpg" alt="">
+                </div>
+                <div>
+                    <h4>便捷提示</h4>
+                    <p>技能点用于强化技能等级，高等级的技能拥有更好的效果。<br> 技能点可以通过，提升等级、主线任务、成就获得，能随时免费重置已经添加的技能点。
+                        <br> 部分技能学习需要达到相应角色等级或添加前置技能等级。
+                    </p>
+                    <img src="images/p3.jpg" alt="">
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+	</div>
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+	
+	
+	
+	<!--------------footer顶部广告栏star------------>
+<div id="footer" class="clearfix">
+    <div class="container">
+        <!--内容-->
+        <div class="wrap clearfix">
+            <div class="link">
+                <a href="#">腾讯互动娱乐</a>
+                <span class="line">|</span>
+                <a href="#">服务条款</a>
+                <span class="line">|</span>
+                <a href="#">广告服务</a>
+                <span class="line">|</span>
+                <a href="#">腾讯游戏招聘</a>
+                <span class="line">|</span>
+                <a href="#">腾讯游戏客服</a>
+                <span class="line">|</span>
+                <a href="#">游戏地图</a>
+                <span class="line">|</span>
+                <a href="#">游戏活动</a>
+                <span class="line">|</span>
+                <a href="#">成长守护平台</a>
+                <span class="line">|</span>
+                <a href="#">商务合作</a>
+                <span class="line">|</span>
+                <a href="#">网站导航</a>
+                <span class="line">|</span>
+            </div>
+            <p class="txt1">COPYRIGHT © 1998 – 2017 TENCENT. ALL RIGHTS RESERVED.</p>
+
+            <a href="#">腾讯公司 版权所有</a>
+
+        </div>
+
+    </div>
+</div>
+	
+	
+	
+	
+	
+	
+	
+	
+    <script>
+        $(function () {
+
+
+
+        })
+    </script>
+
+</body>
+
+</html>

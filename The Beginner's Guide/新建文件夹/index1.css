@@ -1,0 +1,337 @@
+#top-banner .container{
+    height: 42px;
+    background-color: #fff;
+    position: relative;
+}
+#top-banner .logo{
+    margin-left: 311px;
+    float: left;
+}
+#top-banner .mlkz {
+    float: left;
+    cursor: pointer;
+}
+/*���￪ս*/
+#top-banner .mlkz .mlkz-h{
+    position: absolute;
+    top: 42px;
+    left: 150px;
+    z-index: 3;
+    display: none;
+}
+#top-banner .czpt {
+    line-height: 42px;
+    width: 120px;
+    float: left;
+}
+#top-banner .txpt{
+    line-height: 42px;
+    cursor: pointer;
+}
+#top-banner .czpt span {
+    padding-left: 2px;
+}
+/*-----------------top-banner���������end-----------------------*/
+
+
+/*-----------------top-nav���������star-----------------------*/
+#top-nav .container{
+    height: 48px;
+    background: url("../images/top-header-bg.png") repeat-x 0 0;
+    height: 47px;
+    position: relative;
+}
+/*���*/
+#top-nav .left>a {
+    float: left;
+    margin-left: 58px;
+    width: 144px;
+    margin-top: 8px;
+}
+#top-nav .left ul {
+    width: 1049px;
+}
+#top-nav .left ul li{
+    float: left;
+}
+#top-nav .left ul li.line{
+    width: 2px;
+    height: 28px;
+    margin-top: 10px;
+    background: url("../images") no-repeat 0 -92px;
+}
+#top-nav .left ul li a{
+    line-height: 47px;
+    padding: 0 10px;
+}
+/*显示的二维码*/
+#top-nav .right .ewm{
+    width: 140px;
+    cursor: pointer;
+    position: absolute;
+    height: 80px;
+    top: 0;
+    right: 400px;
+    z-index: 1;
+}
+#top-nav .right .ewm .bg{
+    width: 64px;
+    height: 66px;
+    background-color: rgba(0,0,0,0.4);
+    float: left;
+}
+#top-nav .right .ewm .bg img {
+    /*text-align: center;*/
+    margin: 10px 6px 0px 6px;
+}
+#top-nav .right p {
+    width: 59px;
+    margin-top: 10px;
+    color: #fff;
+    float: left;
+    padding-left: 10px;
+}
+/*隐藏的二维码*/
+#top-nav .ewm-hide{
+    position: absolute;
+    width: 350px;
+    height: 140px;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    right: 389px;
+    display: none;
+    z-index: 2;
+}
+#top-nav .ewm-hide img{
+    width: 110px;
+    height: 110px;
+    margin-top: 10px;
+}
+#top-nav .ewm-hide p{
+    color: #fff;
+}
+#top-nav .ewm-hide .l{
+    margin-left: 10px;
+}
+#top-nav .ewm-hide .l p{
+    margin-left: 5px;
+}
+#top-nav .ewm-hide .r p{
+    margin-left: 24px;
+}
+#top-nav .ewm-hide .r{
+    margin-left: 20px;
+}
+/*��¼��֤*/
+#top-nav .login-bar {
+    float: right;
+    margin-right: 48px;
+    color: #fff;
+    text-align: center;
+    line-height: 32px;
+}
+#top-nav .login-bar .login{
+    width: 87px;
+    height: 32px;
+    background: url("../images/top-header-bg.png") no-repeat 0 -144px;
+    float: left;
+    margin-top: 9px;
+    cursor: pointer;
+}
+#top-nav .login-bar .yz{
+    float: left;
+    width: 107px;
+    height: 32px;
+    background: url("../images/top-header-bg.png") no-repeat 0 -208px;
+    margin-top: 9px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+    /*-----------------top-nav���������end-----------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 背景大图设置 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000*/
+#bg-pic{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(images/bg-10.jpg) no-repeat;
+    background-attachment: fixed;
+    z-index: -1000
+}
+
+/* a */
+#sidebar .sid-bar:first{
+    position: relative;
+}
+#toindex{
+    width: 178px;
+    height: 65px;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+/* 左侧栏 --------------*/
+#sider11{
+    width: 155px;
+    height: 2423px;
+    background: #2e324c;
+}
+#sidebar{
+    width: 155px;
+    position:absolute;
+}
+
+#sidebar.fixed{
+    position:fixed !important;
+    top:40px !important;
+    left: 0 !important;
+}
+
+/* 每个的标题样式 */
+#sidebar .sid-bar .bt{
+    width: 155px ;
+    height: 64px ;
+    color: #abb1d6;
+    line-height: 64px;
+    font-size: 22px;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    position: relative;
+    /* padding: 15px 0; */
+    cursor: pointer;
+    border-bottom: 1px #23263a solid;
+}
+#sidebar .sid-bar .dianji{
+    width:178px !important;
+    background:#1D1F2D !important;
+    color:#FFD200 !important;
+}
+/* 点击标题  出现的下拉栏  ul的样式 */
+
+#sidebar .sid-bar .ssdh ul{
+    width: 178px;
+    background: #1D1F2D;
+    display: none
+}
+#sidebar .sid-bar .ssdh ul.show{
+    display:block;
+}
+#sidebar .sid-bar ul li a{
+    color: #abb1d6;
+}
+#sidebar .sid-bar ul li {
+    line-height: 53px;
+    height: 53px;
+    border-bottom: 1px solid #23263a;
+    font-size: 16px;
+    color: #abb1d6;
+    text-align: left;
+    padding-left:28px;
+    display: block;
+    cursor: pointer;
+    /* transition: all 0.2s ease; */
+}
+#sidebar .sid-bar ul li.show{
+    color: #FFD200
+}
+#sidebar .sid-bar ul li .notes{
+    width: 10px;
+    height: 5px;
+    background: #abb1d6;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+
+/* 主体切换 */
+#main{
+width: 1120px;
+padding-left: 74px;
+}
+#main .page>div{
+    margin-bottom: 40px;
+}
+#main h3{
+    font-size: 86px;
+    font-weight: bold;
+    color: #2f3845;
+    margin-bottom: 35px;
+}
+#main h4{
+    display: block;
+    font-size: 40px;
+    font-weight: normal;
+    color: #2f3845;
+    border-bottom: 1px #2f3845 solid;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+#main p{
+    font-size: 14px;
+    color: #35383b;
+    margin-bottom: 15px;
+    line-height: 26px;
+}
+#main-tow .page1{
+    display:block;
+    
+}
+#main-tow>div{
+    display:none
+}
+#main-three>div{
+    display:none
+}
+
+
+
+
+
+
+
+/*-----------------footer���������star-----------------------*/
+#footer .container {
+    height: 110px;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+#footer .wrap {
+    padding-top: 34px;
+}
+#footer .wrap .link {
+    height: 30px;
+}
+#footer .wrap .link span{
+    padding: 0 10px;
+}
+#footer .wrap p.txt1 {
+    height: 26px;
+}
